@@ -479,15 +479,6 @@ footer {
   margin-right: 8px;
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    margin-bottom: 20px;
-  }
+cite {
+  font-family: cursive;
 }
