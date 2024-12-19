@@ -75,8 +75,7 @@ header {
   top: 0;
   left: 0;
   height: 100%;
-  background: url("../img/pexels-rachel-claire-5863535.webp") #000 center
-    center/cover no-repeat;
+  background: url("../img/pexels-rachel-claire-5863535.webp") #000 center center/cover no-repeat;
   filter: blur(1px);
   z-index: 0;
   will-change: transform;
@@ -148,12 +147,10 @@ main {
 }
 
 .book-card {
-  background: linear-gradient(
-    180deg,
-    rgb(0, 0, 0) 0,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgb(0 0 0 / 94%) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(0, 0, 0) 0,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgb(0 0 0 / 94%) 100%);
   color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -268,7 +265,9 @@ footer {
 .modal-content {
   background-color: #fff;
   padding: 30px;
-  width: 80%;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow-y: auto;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -334,7 +333,9 @@ footer {
   font-size: 1em;
   line-height: 1.6;
   color: #555;
-  text-align: justify;
+  text-align: center;
+  margin: auto;
+  width: 768px;
 }
 
 .modal.fade-out {
@@ -446,6 +447,7 @@ footer {
 .footer-contact i {
   margin-right: 8px;
 }
+
 .footer-bottom {
   margin-top: 30px;
   padding-top: 15px;
