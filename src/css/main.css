@@ -1,80 +1,24 @@
-@import url(https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+/* Importações */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-div.relogio,
-header h1,
-p#horario {
-  text-shadow: 4px 5px 4px #572d00;
+/* Elementos base */
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-#search-bar,
-header,
-header h1 {
-  position: relative;
+cite {
+  font-family: cursive;
 }
 
-.book-card,
-.book-card img {
-  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.skoob-logo {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: -3px;
-  top: 4px;
-}
-
-footer,
+/* Estilos para o cabeçalho */
 header {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
   padding: 20px;
   width: 100%;
   color: #eae0d5;
-}
-
-.header-bg,
-footer,
-header,
-main {
-  width: 100%;
-}
-
-footer,
-header {
-  color: #eae0d5;
-}
-
-.book-card,
-.close,
-.info-icon,
-.review-arrow {
-  cursor: pointer;
-}
-
-#modal-title,
-.book-card img,
-header h1 {
-  margin-bottom: 10px;
-}
-
-#modal-title,
-.close,
-header h1 {
-  font-weight: 700;
-}
-
-#modal-title,
-#snackbar,
-.book-card,
-footer {
-  text-align: center;
-}
-
-header {
-  overflow: hidden;
-  height: 200px;
   box-shadow: 13px 20px 20px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -82,20 +26,26 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   height: 100%;
-  background: url("../img/pexels-rachel-claire-5863535.webp") #000 center center/cover no-repeat;
+  background: url('../img/pexels-rachel-claire-5863535.webp') #000 center center/cover no-repeat;
   filter: blur(1px);
   z-index: 0;
   will-change: transform;
 }
 
 header h1 {
+  position: relative;
   z-index: 1;
   font-size: 2.5em;
+  font-weight: 700;
   color: #ffb764;
+  margin-bottom: 10px;
+  text-shadow: 4px 5px 4px #572d00;
   animation: 0.5s forwards slideInLeft;
 }
 
+/* Estilos para o relogio */
 div.relogio,
 p#horario {
   position: absolute;
@@ -103,34 +53,13 @@ p#horario {
   right: 20px;
   font-size: 1.3em;
   color: #eae0d5;
+  text-shadow: 4px 5px 4px #572d00;
   animation: 0.5s forwards slideInRight;
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
+/* Estilos para a barra de pesquisa */
 #search-bar {
+  position: relative;
   z-index: 1;
   margin-top: 10px;
   padding: 10px;
@@ -146,7 +75,9 @@ p#horario {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* estilos para o main */
 main {
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -154,27 +85,30 @@ main {
   max-width: 1000px;
 }
 
+/* Estilos para os cards */
 .book-card {
-  background: linear-gradient(180deg,
-      rgb(0, 0, 0) 0,
-      rgba(0, 0, 0, 0.3) 50%,
-      rgb(0 0 0 / 94%) 100%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgb(0 0 0 / 94%) 100%);
   color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
   width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .book-card:hover {
   transform: scale(1.1) rotate(1deg);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  cursor: url("../img/pointer.png"), pointer;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
 .book-card img {
   width: 100%;
   border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .book-card h3 {
@@ -182,11 +116,106 @@ main {
   margin: 10px;
 }
 
-footer {
-  margin-top: auto;
-  background-color: #22333b;
+/* Estilos para o modal */
+.modal,
+#review-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 22, 30, 0.7);
+  justify-content: center;
+  align-items: center;
+  animation: 0.3s forwards fadeIn;
 }
 
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: 0.5s forwards slideDown;
+  transform-origin: top center;
+}
+
+#modal-title {
+  font-size: 1.5em;
+  color: #0a0908;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#modal-author,
+#modal-genre,
+#modal-pages,
+#modal-year {
+  font-size: 1.2em;
+  color: #777;
+  margin-bottom: 0.4rem;
+  display: block;
+  text-align: center;
+}
+
+#modal-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+  margin: auto;
+  width: 768px;
+}
+
+.close {
+  color: #5e503f;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.close:hover {
+  color: #e74c3c;
+  transform: scale(1.2);
+  cursor: url('../img/pointer.png'), pointer;
+}
+
+/* Estilos para a resenha */
+#review-modal-text {
+  text-align: justify;
+}
+
+#review-modal-title {
+  margin-bottom: 0.5rem;
+}
+
+.review-arrow {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color: #598392;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #598392;
+  margin-right: 10px;
+}
+
+/* Estilos para a informação */
 .info-container {
   position: fixed;
   bottom: 20px;
@@ -204,9 +233,28 @@ footer {
   align-items: center;
   border-radius: 50%;
   font-size: 20px;
+  cursor: pointer;
   transition: background-color 0.5s ease-in-out;
 }
 
+.info-icon:hover {
+  background-color: rgba(0, 112, 47, 0.87);
+}
+
+.info-text {
+  display: none;
+  margin-left: 10px;
+  background-color: #0a0908;
+  padding: 5px 10px;
+  color: #eae0d5;
+  border-radius: 5px;
+}
+
+.info-container.active .info-text {
+  display: inline-block;
+}
+
+/* Estilos para o botão de voltar ao topo */
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -236,123 +284,7 @@ footer {
   visibility: visible;
 }
 
-#snackbar,
-.info-text {
-  color: #eae0d5;
-  border-radius: 5px;
-}
-
-.info-icon:hover {
-  background-color: rgba(0, 112, 47, 0.87);
-}
-
-.info-text {
-  display: none;
-  margin-left: 10px;
-  background-color: #0a0908;
-  padding: 5px 10px;
-}
-
-.info-container.active .info-text {
-  display: inline-block;
-}
-
-#review-modal,
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(1, 22, 30, 0.7);
-  justify-content: center;
-  align-items: center;
-  animation: 0.3s forwards fadeIn;
-}
-
-.modal-content {
-  background-color: #fff;
-  padding: 30px;
-  max-width: 90%;
-  margin: 0 auto;
-  overflow-y: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  position: relative;
-  animation: 0.5s forwards slideDown;
-  transform-origin: top center;
-}
-
-#review-modal-text {
-  text-align: justify;
-}
-
-.review-arrow {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  color: #598392;
-  cursor: url("../img/pointer.png"), pointer;
-}
-
-.arrow {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid #598392;
-  margin-right: 10px;
-}
-
-#review-modal-title {
-  margin-bottom: 0.5rem;
-}
-
-.close {
-  color: #5e503f;
-  font-size: 24px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  transition: 0.2s;
-}
-
-.close:hover {
-  color: #e74c3c;
-  transform: scale(1.2);
-  cursor: url("../img/pointer.png"), pointer;
-}
-
-#modal-title {
-  font-size: 1.5em;
-  color: #0a0908;
-}
-
-#modal-author,
-#modal-genre,
-#modal-pages,
-#modal-year {
-  font-size: 1.2em;
-  color: #777;
-  margin-bottom: 0.4rem;
-  display: block;
-  text-align: center;
-}
-
-#modal-description {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #555;
-  text-align: center;
-  margin: auto;
-  width: 768px;
-}
-
-.modal.fade-out {
-  animation: 0.5s forwards fadeOutModal;
-}
-
+/* estilos para a barra de notificação */
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -364,6 +296,9 @@ footer {
   left: 50%;
   bottom: 30px;
   font-size: 17px;
+  text-align: center;
+  color: #eae0d5;
+  border-radius: 5px;
   transition: opacity 0.5s;
 }
 
@@ -372,12 +307,13 @@ footer {
   animation: 0.6s fadeInOut, 0.5s 2.8s fadeOut;
 }
 
+/* Estilos para o rodapé */
 footer {
   margin-top: auto;
-  background-color: #22333b;
   padding: 40px 20px;
+  width: 100%;
+  background-color: #22333b;
   color: #eae0d5;
-  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -432,23 +368,7 @@ footer {
 
 .footer-links a:hover {
   color: #ff8600;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-  cursor: url("../img/pointer.png"), pointer;
-}
-
-.footer-links,
-.footer-contact a {
-  text-decoration: none;
-  color: #eae0d5;
-  font-size: 0.9em;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-links,
-.footer-contact a:hover {
-  color: #ff8600;
-  cursor: url("../img/pointer.png"), pointer;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
 .footer-contact p {
@@ -458,6 +378,18 @@ footer {
 
 .footer-contact i {
   margin-right: 8px;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #eae0d5;
+  font-size: 0.9em;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #ff8600;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
 .footer-bottom {
@@ -485,6 +417,15 @@ footer {
   color: #eae0d5;
 }
 
+/* Estilos para o logotipo do skoob */
+.skoob-logo {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -3px;
+  top: 4px;
+}
+
 .open-source-icon {
   width: 20px;
   height: 20px;
@@ -493,6 +434,27 @@ footer {
   margin-right: 8px;
 }
 
-cite {
-  font-family: cursive;
+/* Animações */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

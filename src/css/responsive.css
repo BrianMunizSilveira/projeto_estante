@@ -1,4 +1,9 @@
+/* Media Queries */
+
+/* Tabletes e celulares (768px e inferior) */
 @media (max-width: 768px) {
+
+  /* Cabeçalho Responsivo */
   header {
     height: 150px;
     padding: 15px;
@@ -8,72 +13,17 @@
     font-size: 2em;
   }
 
+  /* Barra de pesquisa Responsiva */
   #search-bar {
     width: 90%;
   }
 
+  /* Cartão de Livro Responsivo */
   .book-card {
     width: 120px;
   }
 
-  .info-container {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .info-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .close {
-    font-size: 20px;
-  }
-
-  #modal-title {
-    font-size: 1.2em;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    height: 150px;
-    padding: 15px;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  #search-bar {
-    width: 90%;
-  }
-
-  .book-card {
-    width: 120px;
-  }
-
-  .info-container {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .info-icon {
-    width: 25px;
-    height: 25px;
-  }
-
+  /* Modal responsivo */
   .close {
     font-size: 20px;
   }
@@ -89,6 +39,7 @@
     font-size: 1em;
   }
 
+  /* Modal Resenha Responsivo */
   #review-modal-title {
     font-size: 1.2em;
   }
@@ -109,31 +60,18 @@
     font-size: 0.8em;
   }
 
-  footer {
-    padding: 20px;
+  /* Container de Informação Responsivo */
+  .info-container {
+    bottom: 10px;
+    left: 10px;
   }
 
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    margin-bottom: 20px;
-  }
-
-  .open-source-icon {
+  .info-icon {
     width: 25px;
     height: 25px;
   }
 
-  cite {
-    font-family: monospace;
-    font-size: 1.2em;
-  }
-
+  /* Botão de Voltar ao Topo Responsivo */
   #back-to-top {
     width: 25px;
     height: 25px;
@@ -161,12 +99,47 @@
   #back-to-top:active i {
     font-size: 1em;
   }
+
+  /* Rodapé Responsivo */
+  footer {
+    padding: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    margin-bottom: 20px;
+  }
+
+  /* Icone de Open Source Responsivo */
+  .open-source-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  cite {
+    font-family: monospace;
+    font-size: 1.2em;
+  }
 }
 
+/* Celulares (480px e inferior) */
 @media (max-width: 480px) {
+
+  /* Cabeçalho Responsivo */
   header {
     height: 120px;
     padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    text-align: left;
   }
 
   div.relogio,
@@ -176,33 +149,17 @@
     right: 17px;
   }
 
-  header h1 {
-    font-size: 1.5em;
-    text-align: left;
-  }
-
+  /* Barra de pesquisa Responsiva */
   #search-bar {
     width: 95%;
   }
 
+  /* Cartão de Livro Responsivo */
   .book-card {
     width: 100px;
   }
 
-  .info-container {
-    bottom: 5px;
-    left: 5px;
-  }
-
-  .info-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .close {
-    font-size: 18px;
-  }
-
+  /* Modal Responsivo */
   .modal-content {
     font-size: 14px;
     word-wrap: break-word;
@@ -233,20 +190,33 @@
     overflow-y: auto;
   }
 
-  #review-modal-title {
-    font-size: 1.1em;
+  .close {
+    font-size: 18px;
+    top: 10px;
+    right: 10px;
   }
 
+  /* Modal Resenha Responsivo */
   #review-modal {
     width: 100%;
+  }
+
+  #review-modal-title {
+    font-size: 1.1em;
   }
 
   #review-modal-text {
     font-size: 1em;
   }
 
-  .close {
-    top: 10px;
-    right: 10px;
+  /* Container de Informação Responsivos */
+  .info-container {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .info-icon {
+    width: 20px;
+    height: 20px;
   }
 }
