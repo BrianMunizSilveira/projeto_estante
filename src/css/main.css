@@ -19,6 +19,14 @@ header h1 {
   transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+.skoob-logo {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -3px;
+  top: 4px;
+}
+
 footer,
 header {
   padding: 20px;
@@ -161,6 +169,7 @@ main {
 .book-card:hover {
   transform: scale(1.1) rotate(1deg);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  cursor: url("../img/pointer.png"), pointer;
 }
 
 .book-card img {
@@ -284,6 +293,7 @@ footer {
   align-items: center;
   margin-top: 20px;
   color: #598392;
+  cursor: url("../img/pointer.png"), pointer;
 }
 
 .arrow {
@@ -311,6 +321,7 @@ footer {
 .close:hover {
   color: #e74c3c;
   transform: scale(1.2);
+  cursor: url("../img/pointer.png"), pointer;
 }
 
 #modal-title {
@@ -423,6 +434,7 @@ footer {
   color: #ff8600;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  cursor: url("../img/pointer.png"), pointer;
 }
 
 .footer-links,
@@ -436,7 +448,7 @@ footer {
 .footer-links,
 .footer-contact a:hover {
   color: #ff8600;
-  cursor: pointer;
+  cursor: url("../img/pointer.png"), pointer;
 }
 
 .footer-contact p {
