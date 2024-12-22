@@ -310,112 +310,174 @@ main {
 
 /* Estilos para o rodapé */
 footer {
+  background: linear-gradient(180deg, #1b252d 0%, #22333b 100%);
   margin-top: auto;
-  padding: 40px 20px;
   width: 100%;
-  background-color: #22333b;
+  padding: 40px 20px;
+  font-size: 0.9rem;
   color: #eae0d5;
   text-align: center;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 30px;
-  flex-direction: row-reverse;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #3a4a52;
+}
+
+.footer-container i {
+  margin-right: 8px;
+}
+
+.footer-container ul {
+  list-style: none;
 }
 
 .footer-about,
 .footer-links,
-.footer-contact {
-  flex: 1;
-  min-width: 200px;
+.footer-contact,
+.footer-references,
+.foooter-publishers {
   text-align: justify;
 }
 
 .footer-about h4,
 .footer-links h4,
-.footer-contact h4 {
-  font-size: 1.2em;
-  margin-bottom: 15px;
+.footer-contact h4,
+.footer-references h4,
+.footer-publishers h4 {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #ff8600;
-  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-about h4::after,
+.footer-links h4::after,
+.footer-contact h4::after,
+.footer-references h4::after,
+.footer-publishers h4::after {
+  display: block;
+  background-color: #ff8600;
+  border-radius: 2px;
+  width: 253px;
+  height: 3px;
+  margin-top: 2px;
+  content: '';
 }
 
 .footer-about p,
 .footer-contact p {
-  font-size: 0.9em;
+  font-size: 0.95rem;
+  color: #d4c5b2;
   line-height: 1.6;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .footer-links li {
   margin-bottom: 10px;
 }
 
-.footer-links a {
+.footer-links,
+.footer-references, a {
+  font-size: 0.95rem;
   text-decoration: none;
   color: #eae0d5;
   transition: color 0.3s ease-in-out;
 }
 
-.footer-links a:hover {
+.footer-links,
+.footer-references,
+.footer-publishers,  a:hover {
   color: #ff8600;
-  cursor: url('../img/pointer.png'), pointer;
 }
 
 .footer-contact p {
-  color: #bfbfbf;
   margin-bottom: 10px;
-}
-
-.footer-contact i {
-  margin-right: 8px;
+  color: #d4c5b2;
 }
 
 .footer-contact a {
+  font-size: 0.95rem;
   text-decoration: none;
   color: #eae0d5;
-  font-size: 0.9em;
   transition: color 0.3s ease-in-out;
 }
 
 .footer-contact a:hover {
   color: #ff8600;
-  cursor: url('../img/pointer.png'), pointer;
+}
+
+.footer-publishers {
+  font-size: 0.9rem;
+  color: #bfbfbf;
+  margin-top: 30px;
+  padding-top: 15px;
+}
+
+.footer-publishers h4 {
+  text-align: left;
+}
+
+.footer-publishers ul {
+  text-align: left;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.footer-publishers li {
+  margin-bottom: 10px;
 }
 
 .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #bfbfbf;
   margin-top: 30px;
   padding-top: 15px;
-  font-size: 0.9em;
-  color: #bfbfbf;
-  border-top: 1px solid #3a4a52;
-  text-align: center;
 }
 
 .footer-bottom p {
-  margin: 0;
   color: #bfbfbf;
 }
 
 .footer-bottom a {
-  color: #ff8600;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: #ff8600;
+  transform: color 0.3s ease-in-out;
 }
 
 .footer-bottom a:hover {
   color: #eae0d5;
+}
+
+.footer-container .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  font-size: 1.4rem;
+  color: #eae0d5;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #ff8600;
+  transform: scale(1.2);
 }
 
 /* Estilos para o logotipo do skoob */
