@@ -206,7 +206,10 @@
   }
 
   #review-modal-text {
-    font-size: 1em;
+    max-height: 450px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   /* Container de Informação Responsivos */
