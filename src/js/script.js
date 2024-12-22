@@ -38,13 +38,16 @@ function showSnackbar(e) {
 function showModal(e) {
   let t = document.getElementById("modal-title"),
     o = document.getElementById("modal-author"),
-    n = document.getElementById("modal-description"),
+    n = document.getElementById("book-publisher");
+  desc = document.getElementById("modal-description"),
     a = document.getElementById("book-year"),
     l = document.getElementById("book-pages"),
     d = document.getElementById("book-genre");
+
   (t.textContent = e.title),
     (o.textContent = `Autor: ${e.author}`),
-    (n.textContent = e.description),
+    (n.textContent = e.publisher),
+    (desc.textContent = e.description),
     (a.textContent = e.year),
     (l.textContent = e.pages),
     (d.textContent = `G\xeanero: ${e.genres.join(", ")}`),
