@@ -87,6 +87,11 @@ main {
 
 /* Estilos para os cards */
 .book-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
   background: linear-gradient(180deg, rgb(0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgb(0 0 0 / 94%) 100%);
   color: #fff;
   border-radius: 8px;
@@ -384,7 +389,8 @@ footer {
 }
 
 .footer-links,
-.footer-references, a {
+.footer-references,
+a {
   font-size: 0.95rem;
   text-decoration: none;
   color: #eae0d5;
@@ -393,7 +399,8 @@ footer {
 
 .footer-links,
 .footer-references,
-.footer-publishers,  a:hover {
+.footer-publishers,
+a:hover {
   color: #ff8600;
 }
 

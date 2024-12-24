@@ -133,13 +133,15 @@
 
   /* Cabeçalho Responsivo */
   header {
-    height: 120px;
+    height: 150px;
     padding: 10px;
   }
 
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: left;
+    top: 8px;
+    height: 30px;
   }
 
   div.relogio,
@@ -157,6 +159,10 @@
   /* Cartão de Livro Responsivo */
   .book-card {
     width: 100px;
+  }
+
+  .book-card h3 {
+    font-size: 0.8em;
   }
 
   /* Modal Responsivo */
