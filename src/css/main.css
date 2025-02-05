@@ -20,6 +20,7 @@ header {
   width: 100%;
   color: #eae0d5;
   box-shadow: 13px 20px 20px 4px rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 
 .header-bg {
@@ -323,6 +324,7 @@ footer {
   color: #eae0d5;
   text-align: center;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+  z-index: -2;
 }
 
 .footer-container {
