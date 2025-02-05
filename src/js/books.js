@@ -482,4 +482,27 @@ const books = [
     review:
       "Leitura em andamento. Me acompanhe no skoob para seguir a leitura. Assim que finalizar, irei avaliar o livro e deixar minha resenha aqui.",
   },
+  {
+    title: "Paulo Freire: Uma História de Vida",
+    author: "Ana Maria Araújo Freire",
+    description: `Obra em capa dura, com fotos e documentos inéditos, sobre a trajetória de Paulo Freire Nesta biografia do Patrono da Educação brasileira, a educadora Ana Maria Araújo Freire oferece ao público uma visão única sobre vida, a obra e o legado de Paulo Freire para as próximas gerações de todo o mundo. Desde a infância em Recife até a maturidade em São Paulo, os leitores poderão acompanhar a trajetória de um dos pensadores mais respeitados internacionalmente. A família, os amigos, os educandos, a participação política, nada escapa a essa biografia. A edição de capa dura reúne fotos e documentos inéditos, além de encarte com manuscritos de poemas, escritos por Paulo Freire em diferentes momentos de sua vida e algumas das fichas de cultura, centrais para o “Método de Alfabetização Paulo Freire”, desenhadas por Francisco Brennand.`,
+    year: 2007,
+    pages: 656,
+    publisher: "Paz e Terra",
+    genres: ["Biografia", "Literatura Brasileira"],
+    cover: "https://m.media-amazon.com/images/I/91rNVNAMX5L._SL1500_.jpg",
+    review: `
+    A biografia de Paulo Freire, escrita por sua esposa, Ana Maria Araújo Freire, é uma obra que nos convida a mergulhar na vida de um dos maiores educadores brasileiros. Publicada em 2005, o livro traça a trajetória de Freire desde sua infância até seu reconhecimento internacional, passando por momentos marcantes como a criação do seu método de alfabetização de adultos, sua prisão durante o regime militar, o exílio e seu retorno ao Brasil. A narrativa é permeada por uma admiração profunda, o que, por um lado, enriquece a leitura, mas, por outro, pode soar um pouco idealizada.
+
+    Confesso que, ao longo da leitura, senti que a autora, naturalmente influenciada pelo seu vínculo afetivo com Freire, tende a "santificá-lo" em alguns momentos. A repetição constante de sua dedicação aos "fracos e oprimidos" acabou soando um tanto forçada para mim, como se a intenção fosse mais exaltar sua figura do que apresentar uma visão mais equilibrada de suas lutas e contradições. Ainda assim, é inegável a importância do legado de Freire, especialmente sua capacidade de enxergar os educandos como seres humanos ativos no processo de aprendizagem, algo que revolucionou a educação no Brasil e no mundo.
+
+    Um ponto que me chamou a atenção foi a riqueza de detalhes e documentos presentes no livro, como cartas, bilhetes e avisos. Por um lado, isso acrescenta autenticidade à narrativa, mas, por outro, torna a leitura um pouco cansativa em certos momentos. O livro é extenso, e nem sempre esses elementos agregam de forma fluida à história. Em alguns trechos, senti que a obra poderia ter sido mais concisa, focando nos momentos mais impactantes da vida de Freire.
+
+    Apesar desses pequenos deslizes, a biografia é uma leitura inspiradora. A frase que resume o pensamento de Freire — "É necessário diminuir a distância entre o que se faz, se fala e se pensa. Agir com generosidade, para assim transformar o mundo num lugar onde seja mais fácil amar" — ecoa ao longo de toda a obra e serve como um lembrete poderoso de sua coerência e ética. É impossível não admirar a forma como ele dedicou sua vida à educação e à luta por um mundo mais justo.
+
+    No entanto, como leitor, senti que faltou um olhar mais crítico em alguns momentos. A admiração de Ana Maria é compreensível, mas uma abordagem mais distanciada poderia ter trazido uma perspectiva mais rica e multifacetada sobre a vida e as ideias de Freire. Ainda assim, a obra é um registro importante da trajetória de um homem que transformou a educação e continua a inspirar gerações.
+
+    Em resumo, "Paulo Freire: Uma História de Vida" é um bom livro e recomendo a leitura, especialmente para quem busca uma análise detalhada e extensa da vida e obra de Paulo Freire, como pesquisadores e estudantes da área de educação. No entanto, para leitores que, como eu, buscam uma introdução mais leve e direta à história de Freire, a obra pode parecer um tanto massante devido à sua extensão e ao excesso de detalhes documentais. Nesses casos, talvez valha a pena buscar outras fontes mais sintéticas, sem, é claro, retirar o mérito desta biografia, que é um importante registro histórico e afetivo sobre um dos maiores nomes da educação brasileira e do mundo.
+  `,
+  },
 ];
