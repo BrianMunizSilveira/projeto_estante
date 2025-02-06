@@ -136,3 +136,24 @@ document.getElementById("back-to-top").addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Exibir o modal de boas-vindas ao carregar a página
+document.addEventListener('DOMContentLoaded', function () {
+  const welcomeAlert = document.getElementById('welcomeAlert');
+  const closeWelcomeAlert = document.getElementById('closeWelcomeAlert');
+
+  // Mostrar o modal ao carregar a página
+  welcomeAlert.style.display = 'block';
+
+  // Fechar o modal quando o botão de fechar for clicado
+  closeWelcomeAlert.addEventListener('click', function () {
+    welcomeAlert.style.display = 'none';
+  });
+
+  // Fechar o modal se o usuário clicar fora dele
+  window.addEventListener('click', function (event) {
+    if (event.target === welcomeAlert) {
+      welcomeAlert.style.display = 'none';
+    }
+  });
+});

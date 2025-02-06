@@ -47,6 +47,14 @@
     <!-- Os livros serão inseridos aqui dinamicamente -->
   </main>
 
+  <!-- Modal para o Alert Personalizado -->
+  <div id="welcomeAlert" class="modal">
+    <div class="modal-content">
+      <span id="closeWelcomeAlert" class="close">&times;</span>
+      <p>Bem-vinda(o)! Para saber mais sobre os livros, basta clicar na capa. Aproveite!</p>
+    </div>
+  </div>
+
   <div class="info-container" id="update-info">
     <div class="info-icon" onclick="toggleInfo()">
       <i class="bi bi-info-circle"></i>
@@ -114,7 +122,8 @@
         <nav>
           <ul>
             <li>
-              <a href="https://editoraaleph.com.br/" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i>
+              <a href="https://editoraaleph.com.br/" target="_blank" rel="noopener noreferrer"><i
+                  class="bi bi-book"></i>
                 Aleph</a>
             </li>
             <li>
