@@ -1,231 +1,313 @@
-/* Media Queries */
+/* ==================== */
+/* MEDIA QUERIES GLOBAIS */
+/* ==================== */
 
-/* Tabletes e celulares (768px e inferior) */
-@media (max-width: 768px) {
-
-  /* Cabeçalho Responsivo */
-  header {
-    height: 150px;
-    padding: 15px;
+/* Dispositivos grandes (desktops, 1200px e superior) */
+@media (min-width: 1200px) {
+  /* Ajustes específicos para telas muito grandes */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  /* Barra de pesquisa Responsiva */
-  #search-bar {
-    width: 90%;
-  }
-
-  /* Cartão de Livro Responsivo */
-  .book-card {
-    width: 120px;
-  }
-
-  /* Modal responsivo */
-  .close {
-    font-size: 20px;
-  }
-
-  #modal-title {
-    font-size: 1.2em;
-  }
-
-  #modal-author,
-  #modal-genre,
-  #modal-pages,
-  #modal-year {
-    font-size: 1em;
-  }
-
-  /* Modal Resenha Responsivo */
-  #review-modal-title {
-    font-size: 1.2em;
-  }
-
-  #review-modal-text {
-    font-size: 1em;
-  }
-
-  .review-arrow {
-    margin-top: 10px;
-  }
-
-  .arrow {
-    border-bottom-width: 8px;
-  }
-
-  .arrow-text {
-    font-size: 0.8em;
-  }
-
-  /* Container de Informação Responsivo */
-  .info-container {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .info-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  /* Botão de Voltar ao Topo Responsivo */
-  #back-to-top {
-    width: 25px;
-    height: 25px;
-    font-size: 0.8em;
-  }
-
-  #back-to-top i {
-    font-size: 1em;
-  }
-
-  #back-to-top:hover {
-    width: 30px;
-    height: 30px;
-  }
-
-  #back-to-top:hover i {
-    font-size: 1.2em;
-  }
-
-  #back-to-top:active {
-    width: 25px;
-    height: 25px;
-  }
-
-  #back-to-top:active i {
-    font-size: 1em;
-  }
-
-  /* Rodapé Responsivo */
-  footer {
-    padding: 20px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    margin-bottom: 20px;
-  }
-
-  /* Icone de Open Source Responsivo */
-  .open-source-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  cite {
-    font-family: monospace;
-    font-size: 1.2em;
+  
+  .modal-content {
+    max-width: 900px;
   }
 }
 
-/* Celulares (480px e inferior) */
-@media (max-width: 480px) {
+/* Dispositivos médios (tablets, 992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Ajustes opcionais para tablets na orientação paisagem */
+}
 
-  /* Cabeçalho Responsivo */
+/* Tablets (768px a 991px) */
+@media (max-width: 991px) {
+  /* Header */
   header {
-    height: 150px;
-    padding: 10px;
+    padding: var(--space-lg) var(--space-md);
+    min-height: 200px;
   }
-
+  
   header h1 {
-    font-size: 1.2em;
-    text-align: left;
-    top: 8px;
-    height: 30px;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: var(--space-sm);
   }
-
-  div.relogio,
-  p#horario {
-    font-size: 1em;
-    top: 17px;
-    right: 17px;
-  }
-
-  /* Barra de pesquisa Responsiva */
+  
+  /* Barra de pesquisa */
   #search-bar {
+    width: 70%;
+    padding: var(--space-sm);
+  }
+  
+  /* Grid de livros */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+  
+  .book-card {
+    width: 100%;
+  }
+  
+  .book-title {
+    font-size: 1rem;
+  }
+  
+  /* Modais */
+  .modal-content {
+    padding: var(--space-md);
     width: 95%;
   }
-
-  /* Cartão de Livro Responsivo */
-  .book-card {
-    width: 100px;
+  
+  .book-details {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
-
-  .book-card h3 {
-    font-size: 0.8em;
+  
+  .book-cover-large {
+    max-height: 300px;
+    margin: 0 auto;
   }
-
-  /* Modal Responsivo */
-  .modal-content {
-    font-size: 14px;
-    word-wrap: break-word;
-    width: 100%;
-    height: auto;
-    padding: 16px;
-    box-sizing: border-box;
+  
+  /* Rodapé */
+  footer {
+    padding: var(--space-lg);
   }
-
-  #modal-title {
-    font-size: 1.1em;
+  
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
   }
-
-  #modal-author,
-  #modal-genre,
-  #modal-pages,
-  #modal-year {
-    font-size: 1em;
-  }
-
-  #modal-description {
-    width: 100%;
-    font-size: 1em;
-    color: #555;
-    text-align: justify;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    overflow-y: auto;
-  }
-
-  .close {
-    font-size: 18px;
+  
+  /* Relógio e Toggle */
+  .relogio {
     top: 10px;
     right: 10px;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
   }
-
-  /* Modal Resenha Responsivo */
-  #review-modal {
-    width: 100%;
+  
+  .theme-switch {
+    width: 50px;
+    height: 25px;
   }
-
-  #review-modal-title {
-    font-size: 1.1em;
+  
+  .slider:before {
+    height: 18px;
+    width: 18px;
   }
-
-  #review-modal-text {
-    max-height: 450px;
-    overflow-y: auto;
-    font-size: 14px;
-    line-height: 1.6;
+  
+  input:checked + .slider:before {
+    transform: translateX(25px);
   }
+}
 
-  /* Container de Informação Responsivos */
-  .info-container {
-    bottom: 5px;
-    left: 5px;
+/* Tablets pequenos e celulares grandes (576px a 767px) */
+@media (max-width: 767px) {
+  /* Ajustes adicionais para tablets menores */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-publishers ul {
+    columns: 1;
+  }
+}
 
-  .info-icon {
-    width: 20px;
+/* Celulares (480px a 575px) */
+@media (max-width: 575px) {
+  /* Header */
+  header {
+    padding: var(--space-md);
+    min-height: 180px;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  /* Barra de pesquisa */
+  #search-bar {
+    width: 70%;
+    padding: var(--space-xs) var(--space-sm);
+  }
+  
+  /* Grid de livros */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+  }
+  
+  .book-cover {
+    height: 200px;
+  }
+  
+  /* Modais */
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  
+  .modal-title {
+    font-size: 1.2rem;
+  }
+  
+  /* Relógio e Toggle */
+  .relogio {
+    top: 3px;
+    right: 3px;
+    font-size: 0.8rem;
+    top: var(--space-sm);
+  }
+  
+  .theme-toggle {
+    top: var(--space-sm);
+  }
+  
+  .theme-switch {
+    width: 45px;
+    height: 22px;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(23px);
+  }
+}
+
+/* Celulares pequenos (até 479px) */
+@media (max-width: 479px) {
+  /* Header */
+  header {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  header h1 {
+    font-size: 1.3rem;
+  }
+  
+  /* Grid de livros */
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .book-cover {
+    height: 180px;
+  }
+  
+  .book-info {
+    padding: var(--space-sm);
+  }
+  
+  /* Rodapé */
+  footer {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  /* Relógio e Toggle */
+  .relogio {
+    top: 3px;
+    right: 3px;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .theme-switch {
+    width: 40px;
     height: 20px;
+  }
+  
+  .slider:before {
+    height: 16px;
+    width: 16px;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+}
+
+/* Dispositivos muito pequenos (até 359px) */
+@media (max-width: 359px) {
+  /* Grid de livros com 1 coluna */
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-card {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  /* Ajustes finos no relógio */
+  .relogio {
+    top: 3px;
+    right: 3px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ==================== */
+/* AJUSTES ESPECÍFICOS */
+/* ==================== */
+
+/* Orientação paisagem em celulares */
+@media (max-height: 480px) and (orientation: landscape) {
+  header {
+    min-height: 150px;
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .modal-content {
+    max-height: 80vh;
+  }
+}
+
+/* Dispositivos com altura muito pequena */
+@media (max-height: 400px) {
+  header {
+    padding: var(--space-sm);
+  }
+  
+  .book-cover {
+    height: 150px;
+  }
+  
+  .modal-content {
+    max-height: 70vh;
+    padding: var(--space-sm);
+  }
+}
+
+/* Impressão */
+@media print {
+  header, footer, #back-to-top, .theme-toggle, .relogio {
+    display: none;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-sm);
+  }
+  
+  .book-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
   }
 }

@@ -27,27 +27,37 @@
   <link rel="stylesheet" href="./src/css/main.css" />
   <link rel="stylesheet" href="./src/css/responsive.css" />
   <link rel="shortcut icon" href="./src/img/leitor.png" type="image/x-icon" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-  <header class="parallax">
-    <div class="header-bg"></div>
-    <h1>Minha Estante Virtual</h1>
-    <label for="search-bar">Search Bar</label><input type="text" id="search-bar"
-      placeholder="Buscar por título ou autor..." />
-    <div id="snackbar"></div>
-  </header>
-
-  <div class="relogio">
-    Atualmente são:
-    <p id="horario"></p>
+<header>
+  <div class="header-decoration"></div>
+  <svg class="book-icon">...</svg>
+  <svg class="book-icon">...</svg>
+  
+  <div class="relogio-container relogio">
+    <span class="relogio-label">Horário:</span>
+    <span id="horario"></span>
   </div>
 
-  <main id="book-shelf">
+  <h1>Minha Estante Virtual</h1>
+  <p class="header-subtitle">Explore minha coleção de livros</p>
+  
+  <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Buscar por título ou autor...">
+    <div id="snackbar"></div>
+  </div>
+</header>
+
+  <main id="book-shelf" class="books-grid">
     <!-- Os livros serão inseridos aqui dinamicamente -->
   </main>
 
-  <!-- Modal para o Alert Personalizado -->
+  <!-- Modal de boas-vindas -->
   <div id="welcomeAlert" class="modal">
     <div class="modal-content">
       <span id="closeWelcomeAlert" class="close">&times;</span>
@@ -55,43 +65,43 @@
     </div>
   </div>
 
-  <div class="info-container" id="update-info">
-    <div class="info-icon" onclick="toggleInfo()">
-      <i class="bi bi-info-circle"></i>
-    </div>
-    <div class="info-text">
-      <span id="data-atualizacao"></span>
-    </div>
-  </div>
-
-  <div id="back-to-top" title="Voltar ao topo">
-    <i class="bi bi-arrow-up"></i>
-  </div>
-
-  <!-- Modal para Informações do Livro -->
-  <div class="modal" id="modal">
+  <!-- Modal do livro -->
+  <div class="modal" id="book-modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modal-title">Título do Livro</h2>
-      <span id="modal-author">Autor do Livro</span>
-      <p id="modal-publisher">Editora: <span id="book-publisher"></span></p>
-      <p id="modal-year">Ano: <span id="book-year"></span></p>
-      <p id="modal-pages">Páginas: <span id="book-pages"></span></p>
-      <p id="modal-genre"><span id="book-genre"></span></p>
-      <p id="modal-description">Descrição do livro...</p>
-      <div class="review-arrow" id="review-arrow">
-        <div class="arrow"></div>
-        <span>Ver Resenha</span>
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title">Título do Livro</h2>
       </div>
+
+      <div class="book-details">
+        <img id="modal-cover" src="" alt="Capa do livro" class="book-cover-large">
+
+        <div class="book-meta">
+          <p><strong>Autor:</strong> <span id="modal-author"></span></p>
+          <p><strong>Editora:</strong> <span id="book-publisher"></span></p>
+          <p><strong>Ano:</strong> <span id="book-year"></span></p>
+          <p><strong>Páginas:</strong> <span id="book-pages"></span></p>
+          <p><strong>Gênero:</strong> <span id="book-genre"></span></p>
+        </div>
+      </div>
+
+      <h3>Sinopse</h3>
+      <p id="modal-description" class="book-description">Descrição do livro...</p>
+
+      <button id="review-btn" class="review-btn">
+        <i class="bi bi-book"></i> Ver Resenha
+      </button>
     </div>
   </div>
 
-  <!-- Modal para a Resenha -->
+  <!-- Modal da resenha -->
   <div class="modal" id="review-modal">
     <div class="modal-content">
-      <span class="close" onclick="closeReviewModal()">&times;</span>
-      <h2 id="review-modal-title">Título da Resenha</h2>
-      <p id="review-modal-text">Aqui está a resenha do livro...</p>
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h2 id="review-modal-title" class="modal-title">Resenha</h2>
+      </div>
+      <p id="review-modal-text" class="review-text">Aqui está a resenha do livro...</p>
     </div>
   </div>
 
@@ -264,10 +274,6 @@
       <div class="footer-contact">
         <h4><i class="bi bi-envelope-fill"></i> Conecte-se comigo</h4>
         <p>
-          <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" nofollow rel="noopener noreferrer"><i
-              class="bi bi-instagram"></i>Instagram</a>
-        </p>
-        <p>
           <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" nofollow
             rel="noopener noreferrer"><i class="bi bi-linkedin"></i>Linkedin</a>
         </p>
@@ -294,13 +300,19 @@
     <div class="footer-bottom">
       <p>
         <i class="bi bi-github"></i>
-        Este projeto é <a href="https://github.com/BrianMunizSilveira/meu-repositorio">Open Source</a>
+        Este projeto é <a href="https://github.com/BrianMunizSilveira/projeto_estante" target="_blank" rel="noopener noreferrer" title="GitHub" style="text-decoration: underline;">Open Source</a>
       </p>
     </div>
   </footer>
 
+  <div id="back-to-top" title="Voltar ao topo">
+    <i class="bi bi-arrow-up"></i>
+  </div>
+
   <script src="./src/js/books.js"></script>
   <script src="./src/js/script.js"></script>
 </body>
+
+</html>
 
 </html>

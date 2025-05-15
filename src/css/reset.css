@@ -1,27 +1,86 @@
 @charset "UTF-8";
 
-* {
+/* Reset moderno e mais completo */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background: #0a0908
-    url("https://organicsnewsbrasil.com.br/wp-content/uploads/2017/10/book-67049_1920.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-  animation: 1s forwards fadeIn;
-  cursor: url("../img/mouse.png"), auto;
-  font-family: Arial, sans-serif;
-  background-color: #eae0d5;
-  color: #0a0908;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
+/* Estilo da scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252175;
+  border-radius: 10px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #0a0908;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -34,7 +93,7 @@ body {
 
 @keyframes slideDown {
   from {
-    transform: translateY(-40px);
+    transform: translateY(-20px);
     opacity: 0;
   }
 
@@ -72,4 +131,13 @@ body {
   to {
     opacity: 0;
   }
+}
+
+/* Estilos específicos do body - mantendo seu fundo personalizado */
+body.custom-bg {
+  background: #0a0908 url("https://organicsnewsbrasil.com.br/wp-content/uploads/2017/10/book-67049_1920.jpg") no-repeat center center fixed;
+  background-size: cover;
+  animation: 1s forwards fadeIn;
+  cursor: url("../img/mouse.png"), auto;
+  color: #0a0908;
 }
