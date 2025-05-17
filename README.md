@@ -1,91 +1,87 @@
 # 📚 Estante Virtual 📚
-
-![Template](https://i.imgur.com/WmmKMkm.png)
+![Preview](https://i.imgur.com/bt99gUn.png)
 
 ## ✨ Descrição
+**Estante Virtual** é uma aplicação web interativa desenvolvida para compartilhar e explorar minha jornada literária. O projeto apresenta uma coleção pessoal de livros com funcionalidades avançadas de busca, modais detalhados e um design responsivo com suporte a dark mode.
 
-**Estante Virtual** é uma aplicação web interativa desenvolvida para compartilhar e explorar minha jornada literária. O projeto visa proporcionar aos usuários uma visão dinâmica da minha coleção de livros, onde é possível pesquisar por títulos ou autores, explorar informações detalhadas sobre cada livro e ler resenhas. Além disso, o site conta com funcionalidades de interação como a exibição da hora atual e um botão para voltar ao topo da página.
-
-O site é totalmente responsivo e foi criado para melhorar a experiência do usuário na navegação pelos livros e suas informações.
+## 🌟 Recursos Destacados
+- 🔍 **Busca avançada**: Pesquise livros por título ou autor
+- 📖 **Modais interativos**: Visualize detalhes completos dos livros e resenhas
+- 🌙 **Dark Mode**: Alternância entre temas claro e escuro
+- ⏱️ **Relógio em tempo real**: Exibe a hora atual
+- 📱 **Design responsivo**: Adaptável a todos os dispositivos
+- ⬆️ **Botão "Voltar ao Topo"**: Melhora a navegação em páginas longas
 
 ## 🗂️ Estrutura do Projeto
-
-O projeto é dividido nas seguintes seções e arquivos principais:
-
 ```plaintext
-├── src/  
-│   ├── css/               # Estilos
-│   └───── main.css        # Principal css
-│   └───── reset.css       # Formatação para css 
-│   └───── responsive.css  # Css responsivo       
-│   ├── img/               # Imagens utilizadas no site                
-│   ├── js/                # Arquivos JavaScript
-│   └───── books.js        # Dados dinâmicos
-│   └───── script.js       # Funções auxiliares  
-├── index.html             # Página inicial  
-├── LICENSE                # Licença do projeto  
-├── README.md              # Documentação principal    
+├── src/
+│   ├── css/
+│   │   ├── main.css        # Estilos principais
+│   │   ├── reset.css       # Reset de estilos
+│   │   └── responsive.css  # Media queries
+│   ├── img/
+│   │   └── capas/          # Capas dos livros
+│   └── js/
+│       ├── books.js        # Banco de dados dos livros (28 títulos)
+│       └── script.js       # Lógica da aplicação
+├── index.html             # Página principal
+├── LICENSE
+└── README.md
 ```
+
+## 📚 Coleção de Livros
+A estante virtual contém 28 livros cuidadosamente selecionados, abrangendo diversos gêneros como:
+- Ficção Científica
+- Terror
+- Biografias
+- Autoajuda
+- Infantojuvenil
+- E muito mais
+
+Cada livro inclui:
+- Capa digitalizada
+- Metadados completos (autor, editora, ano, páginas)
+- Descrição detalhada
+- Resenha pessoal
+
+## 🛠️ Tecnologias Utilizadas
+- **HTML5**: Estrutura semântica avançada
+- **CSS3**: Variáveis CSS, Grid, Flexbox, animações
+- **JavaScript**: Funcionalidades dinâmicas
+- **Bootstrap Icons**: Ícones modernos
+- **Google Fonts**: Tipografia Inter
 
 ## 🚀 Como Usar
-
-### 🧑‍💻 Pré-requisitos
-
-1. **Clonar o Repositório**
-   Clone o repositório para sua máquina local:
-   ```bash
-   git clone https://github.com/BrianMunizSilveira/estante-virtual.git
-    ```
-2. **Abrir o Projeto**: Abra o arquivo `index.html` em seu navegador preferido.
-
-## ⚡ Funcionalidades Interativas
-
-- 🔎 **Pesquisar Livros**: Utilize a barra de pesquisa para buscar por títulos ou autores de livros.
-
-- 📚 **Exibir Informações**: Clique sobre qualquer livro para visualizar informações detalhadas sobre ele, incluindo uma descrição e a opção de ver a resenha.
-
-- 📝 **Visualizar Resenha**: Ao acessar o modal de informações do livro, é possível navegar até a resenha clicando no botão de "Ver Resenha".
-
-- ⏰ **Acompanhar Hora Atual**: O relógio exibido na parte superior direita da página mostra a hora exata com base no seu horário.
-
-## 💻 Tecnologias Utilizadas
-
-- **HTML5**: Estrutura semântica da página.
-
-- **CSS3**: Estilos para garantir uma boa aparência visual e responsividade.
-
-- **JavaScript**: Funcionalidades dinâmicas, como busca, modais e relógio ao vivo.
-
-## 📦 Biblioteca Utilizada
-
-- **Bootstrap Icons**: Para ícones no layout, como o botão de voltar ao topo e ícones de redes sociais.
-
-## 🤝 Contribuições
-
-Se você deseja contribuir para este projeto, siga os passos abaixo:
-
-1. Fork o repositório.
-
-2. Crie uma branch para sua modificação:
+1. Clone o repositório:
 ```bash
-git checkout -b minha-modificacao
+git clone https://github.com/BrianMunizSilveira/projeto_estante.git
 ```
+2. Abra o arquivo `index.html` no seu navegador
+3. Explore os recursos:
+   - Clique nos livros para ver detalhes
+   - Use a barra de busca para filtrar
+   - Altere entre light/dark mode
+   - Leia as resenhas completas
 
-3. Commit suas mudanças:
-```bash
-git commit -m 'Melhorias no layout'
-```
+## 🌈 Recursos Futuros
+- Sistema de avaliação por estrelas
+- Filtros por gênero/editora
+- Marcador de páginas/livros lidos
+- Integração com API de livros
 
-4. Envie para o repositório remoto:
-```bash
-git push origin minha-modificacao
-```
+## 🤝 Contribuição
+Contribuições são bem-vindas! Siga estes passos:
+1. Faça um fork do projeto
+2. Crie sua branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-5. Abra um Pull Request para revisão e merge.
+## 📄 Licença
+Distribuído sob licença MIT. Veja [LICENSE](https://github.com/BrianMunizSilveira/projeto_estante/blob/main/LICENSE) para mais informações.
 
-## 📝 Licença
-Este projeto está sob a licença [MIT](LICENSE).
+## ✉️ Contato
+Brian Muniz Silveira - [GitHub](https://github.com/BrianMunizSilveira)
 
-## 🙏 Agradecimentos
-
-Agradeço a todos que contribuíram para o desenvolvimento deste projeto e a todos os autores cujas obras estão representadas na Estante Virtual.
+## 🔗 Link do projeto
+[Estante Virtual](https://brianmunizsilveira.github.io/projeto_estante/)
