@@ -441,7 +441,7 @@ header::after {
 }
 
 .book-description {
-  line-height: 1.7;
+  line-height: 2.5;
   margin-bottom: var(--space-lg);
   color: inherit;
 }
@@ -473,7 +473,7 @@ header::after {
 }
 
 .review-text {
-  line-height: 1.8;
+  line-height: 2.5;
   white-space: pre-line;
   color: inherit;
 }
