@@ -48,6 +48,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.5s ease all;
 }
 
 html {
@@ -121,7 +122,7 @@ header h1 {
   margin-bottom: var(--space-sm);
   font-weight: 800;
   letter-spacing: -0.05em;
-  text-shadow: 2px 3px 6px rgba(0,0,0,0.3);
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
 }
@@ -131,7 +132,7 @@ header h1 {
   opacity: 0.9;
   margin-bottom: var(--space-lg);
   font-weight: 400;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Versão simplificada */
@@ -139,9 +140,9 @@ header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -178,7 +179,7 @@ header::after {
   border: none;
   border-radius: var(--radius-full);
   font-size: 1.1rem;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--dark);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
@@ -204,6 +205,20 @@ header::after {
   color: #6fb2ff;
 }
 
+.search-icon {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
+[data-theme="dark"] .search-icon {
+  color: var(--dark-text-secondary);
+}
+
 .relogio-container {
   position: absolute;
   top: var(--space-md);
@@ -211,7 +226,7 @@ header::after {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-full);
@@ -219,7 +234,7 @@ header::after {
   font-family: 'Courier New', monospace;
   font-size: 1.1rem;
   z-index: 3;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .relogio-label {
@@ -414,6 +429,15 @@ header::after {
 
 [data-theme="dark"] .book-meta strong {
   color: var(--dark-text);
+}
+
+.book-meta i {
+  margin-right: var(--space-xs);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .book-meta i {
+  color: var(--primary-light);
 }
 
 .book-description {
@@ -659,6 +683,15 @@ footer {
 #back-to-top:hover {
   background: var(--secondary);
   transform: translateY(-3px);
+}
+
+#back-to-top i {
+  font-size: 1.5rem;
+}
+
+#back-to-top:hover i {
+  transform: translateY(-3px);
+  transition: var(--transition-fast);
 }
 
 /* Snackbar */

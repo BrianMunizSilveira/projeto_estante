@@ -34,24 +34,27 @@
 </head>
 
 <body>
-<header>
-  <div class="header-decoration"></div>
-  <svg class="book-icon">...</svg>
-  <svg class="book-icon">...</svg>
-  
-  <div class="relogio-container relogio">
-    <span class="relogio-label">Horário:</span>
-    <span id="horario"></span>
-  </div>
+  <header>
+    <div class="header-decoration"></div>
+    <svg class="book-icon">...</svg>
+    <svg class="book-icon">...</svg>
 
-  <h1>Minha Estante Virtual</h1>
-  <p class="header-subtitle">Explore minha coleção de livros</p>
-  
-  <div class="search-container">
-    <input type="text" id="search-bar" placeholder="Buscar por título ou autor...">
-    <div id="snackbar"></div>
-  </div>
-</header>
+    <div class="relogio-container relogio">
+      <i class="bi bi-clock"></i>
+      <span class="relogio-label">Horário:</span>
+      <span id="horario"></span>
+    </div>
+
+
+    <h1>Minha Estante Virtual</h1>
+    <p class="header-subtitle">Explore minha coleção de livros</p>
+
+    <div class="search-container">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" id="search-bar" placeholder="Buscar por título ou autor...">
+      <div id="snackbar"></div>
+    </div>
+  </header>
 
   <main id="book-shelf" class="books-grid">
     <!-- Os livros serão inseridos aqui dinamicamente -->
@@ -77,11 +80,11 @@
         <img id="modal-cover" src="" alt="Capa do livro" class="book-cover-large">
 
         <div class="book-meta">
-          <p><strong>Autor:</strong> <span id="modal-author"></span></p>
-          <p><strong>Editora:</strong> <span id="book-publisher"></span></p>
-          <p><strong>Ano:</strong> <span id="book-year"></span></p>
-          <p><strong>Páginas:</strong> <span id="book-pages"></span></p>
-          <p><strong>Gênero:</strong> <span id="book-genre"></span></p>
+          <p><i class="bi bi-person"></i> <strong>Autor:</strong> <span id="modal-author"></span></p>
+          <p><i class="bi bi-building"></i> <strong>Editora:</strong> <span id="book-publisher"></span></p>
+          <p><i class="bi bi-calendar"></i> <strong>Ano:</strong> <span id="book-year"></span></p>
+          <p><i class="bi bi-file-text"></i> <strong>Páginas:</strong> <span id="book-pages"></span></p>
+          <p><i class="bi bi-tags"></i> <strong>Gênero:</strong> <span id="book-genre"></span></p>
         </div>
       </div>
 
@@ -89,7 +92,7 @@
       <p id="modal-description" class="book-description">Descrição do livro...</p>
 
       <button id="review-btn" class="review-btn">
-        <i class="bi bi-book"></i> Ver Resenha
+        <i class="bi bi-chat-square-text"></i> Ver Resenha
       </button>
     </div>
   </div>
@@ -300,13 +303,14 @@
     <div class="footer-bottom">
       <p>
         <i class="bi bi-github"></i>
-        Este projeto é <a href="https://github.com/BrianMunizSilveira/projeto_estante" target="_blank" rel="noopener noreferrer" title="GitHub" style="text-decoration: underline;">Open Source</a>
+        Este projeto é <a href="https://github.com/BrianMunizSilveira/projeto_estante" target="_blank"
+          rel="noopener noreferrer" title="GitHub" style="text-decoration: underline;">Open Source</a>
       </p>
     </div>
   </footer>
 
   <div id="back-to-top" title="Voltar ao topo">
-    <i class="bi bi-arrow-up"></i>
+    <i class="bi bi-arrow-up-circle"></i>
   </div>
 
   <script src="./src/js/books.js"></script>
