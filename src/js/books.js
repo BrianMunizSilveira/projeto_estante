@@ -203,7 +203,7 @@ const books = [
     year: 2017,
     pages: 368,
     publisher: "Galera Record",
-    genres: ["Drama", "Fic\xe7\xe3o", "Literaura Estrangeira"],
+    genres: ["Drama", "Fic\xe7\xe3o", "Literatura Estrangeira"],
     cover:
       "./src/img/capas/assim-que-acaba.webp",
     review:
