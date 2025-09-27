@@ -505,4 +505,27 @@ const books = [
     Em resumo, "Paulo Freire: Uma História de Vida" é um bom livro e recomendo a leitura, especialmente para quem busca uma análise detalhada e extensa da vida e obra de Paulo Freire, como pesquisadores e estudantes da área de educação. No entanto, para leitores que, como eu, buscam uma introdução mais leve e direta à história de Freire, a obra pode parecer um tanto massante devido à sua extensão e ao excesso de detalhes documentais. Nesses casos, talvez valha a pena buscar outras fontes mais sintéticas, sem, é claro, retirar o mérito desta biografia, que é um importante registro histórico e afetivo sobre um dos maiores nomes da educação brasileira e do mundo.
   `,
   },
+  {
+    title: "Pequena História das Grandes Nações – Japão",
+    author: "Otto Zierer",
+    description: "\"Pequena História das Grandes Nações – Japão\" é uma obra abrangente e ricamente ilustrada que traça a trajetória do Japão desde suas origens lendárias até a modernidade. Otto Zierer, com uma narrativa direta e imparcial, oferece um panorama detalhado da evolução política, cultural e social do país, destacando seus momentos de glória e crise. Dividido em nove capítulos, o livro aborda desde as origens e antiguidade, explorando as lendas fundadoras e a mitologia xintoísta, até o Japão contemporâneo como potência tecnológica e cultural.",
+    year: 1985,
+    pages: 124, 
+    publisher: "Círculo do Livro S. A.",
+    genres: ["História", "Divulgação Científica", "Não-ficção"],
+    cover: "./src/img/capas/pequena-historia-japao.webp",
+    review: `"Pequena História das Grandes Nações – Japão" é uma excelente introdução à trajetória do país, equilibrando rigor histórico e apelo visual. A obra se destaca pela narrativa clara e objetiva de Otto Zierer, que evita vieses ideológicos e apresenta fatos históricos de forma equilibrada.
+
+    A estrutura em nove capítulos é bem organizada, abordando desde as origens lendárias do Japão, com a mitologia xintoísta e a figura do Tenno (imperador), passando pelo período clássico e Heian, a era dos samurais e xogunatos, o isolamento do Sakoku e a Restauração Meiji, até chegar ao expansionismo, Segunda Guerra Mundial e a reconstrução pós-guerra.
+
+    Um dos grandes diferenciais da obra é sua riqueza visual, com ilustrações, retratos, mapas e reproduções de arte que complementam o texto e tornam a leitura mais dinâmica. A abordagem multifacetada vai além da história política, explorando aspectos sociais, culturais e mitológicos, incluindo tanto figuras lendárias quanto líderes reais.
+
+    A imparcialidade na análise de conflitos, especialmente da Segunda Guerra Mundial, é um ponto forte notável. A linguagem fluida torna a obra acessível para leitores não especializados, enquanto a contextualização mostra como eventos históricos se relacionam com a identidade japonesa atual.
+
+    O autor demonstra rigor acadêmico ao recorrer a fontes primárias, incluindo crônicas antigas, registros imperiais e relatos ocidentais para embasar sua análise. Isso confere credibilidade e profundidade à narrativa.
+
+    Como possíveis limitações, por ser uma obra mais geral, pode não aprofundar certos períodos específicos. Além disso, sendo uma edição do Círculo do Livro, apesar de rica em imagens, pode ter limitações de revisão ou atualizações historiográficas mais recentes.
+
+    Em conclusão, esta é uma leitura valiosa para entusiastas de história e cultura japonesa. Otto Zierer consegue condensar séculos de história em uma obra atraente e informativa, mantendo o fascínio pela "Terra do Sol Nascente" sem cair em simplificações. Recomendado para quem deseja entender desde as raízes mitológicas até o Japão moderno, oferecendo uma base sólida para compreender a complexa trajetória desta fascinante nação.`,
+  },
 ];
