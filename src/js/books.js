@@ -528,4 +528,26 @@ const books = [
 
     Em conclusão, esta é uma leitura valiosa para entusiastas de história e cultura japonesa. Otto Zierer consegue condensar séculos de história em uma obra atraente e informativa, mantendo o fascínio pela "Terra do Sol Nascente" sem cair em simplificações. Recomendado para quem deseja entender desde as raízes mitológicas até o Japão moderno, oferecendo uma base sólida para compreender a complexa trajetória desta fascinante nação.`,
   },
+  {
+    title: "Ferramentas para Autonomia",
+    author: "Cultive Resistência (Org.)",
+    description: "Punks, anarquistas, feministas, indígenas, moradoras de espaços ocupados, pessoas, compartilham experiências de luta inspiradoras nestes pedaços de papel, elas mostram que, se o capitalismo tem suas armas, nós também temos as nossas: – Solidariedade, apoio mutuo, consenso, ocupações, ação direta, plantar nossa comida, cuidar dos nossos resíduos, boicotes, fazer nossa própria mídia, cuidar da nossa saúde, saber resolver nossos conflitos, são algumas delas. Ferramentas para autonomia não tem a intenção de ser um manual de como fazer as coisas, pois isto cada pessoa pode desenvolver sozinha ou com sua comunidade. O que queremos aqui é mostrar que pessoas pelo mundo já fizeram ou fazem da sua vida algo rebelde e revolucionário, plantando sementes que se transformam em florestas pelo mundo inteiro.",
+    year: 2022,
+    pages: 320,
+    publisher: "Editora Cultive Resistência",
+    genres: ["Não-ficção", "Ativismo", "Política", ],
+    cover: "https://skoob.s3.amazonaws.com/livros/122256744/FERRAMENTAS_PARA_AUTONOMIA_1674183610122256744SK-V11674183611B.jpg",
+    review: "Ferramentas para Autonomia é uma coletânea inspiradora que reúne experiências de luta e resistência de diversos grupos ao redor do mundo. Organizado pela Editora Cultive Resistência, o livro destaca a importância da solidariedade, apoio mútuo e ação direta como ferramentas essenciais para construir autonomia em face do capitalismo. As narrativas apresentadas são diversas, abrangendo desde punks e anarquistas até indígenas e feministas, todas compartilhando suas histórias de resistência. O livro enfatiza práticas como ocupações, plantio de alimentos, cuidado com resíduos, boicotes e resolução de conflitos como formas de empoderamento coletivo. Ferramentas para Autonomia não se propõe a ser um manual, mas sim uma fonte de inspiração para que cada pessoa possa desenvolver suas próprias estratégias de resistência, seja individualmente ou em comunidade. A obra é um convite à reflexão sobre como podemos transformar nossas vidas em atos de rebeldia e revolução, plantando sementes de mudança que podem florescer em florestas de resistência ao redor do mundo. Recomendo este livro para todos que buscam inspiração e ferramentas práticas para construir um mundo mais justo e autônomo.",
+  },
+  {
+    title: "Olga",
+    author: "Fernando Morais",
+    description: "A obra fala sobre a vida de Olga Benário alemã, judia e comunista, que se envolveu com Luís Carlos Prestes. Ela veio ao Brasil para lutar com ele pelos ideais comunistas. Acabou sendo presa e deportada grávida para a Alemanha pelo governo brasileiro, tendo como presidente Getúlio Vargas. Morreu numa câmera de gás de um campo de concentração em 1942.",
+    year: 2004,
+    pages: 264,
+    publisher: "Companhia das Letras",
+    genres: ["Biografia", "História", "Literatura Brasileira"],
+    cover: "./src/img/capas/olga.webp",
+    review: '...',
+  },
 ];
