@@ -548,6 +548,16 @@ const books = [
     publisher: "Companhia das Letras",
     genres: ["Biografia", "História", "Literatura Brasileira"],
     cover: "./src/img/capas/olga.webp",
-    review: '...',
+    review: `Resenha: “Olga”, de Fernando Morais – Uma História que Ecoa na Alma
+
+Anos depois de ter assistido ao filme Olga Benario na escola, finalmente tive a oportunidade de mergulhar nas páginas do livro que deu origem à adaptação, escrito pelo consagrado jornalista Fernando Morais. E que mergulho profundo e impactante.
+
+A primeira grande virtude desta obra é ir muito além da biografia linear. Fernando Morais nos presenteia com uma narrativa minuciosa e extensivamente pesquisada que não se limita à trajetória heroica de Olga. O livro constrói um panorama rico e detalhado do contexto político turbulento da época, abrangendo a ascensão do nazismo na Alemanha, a efervescência comunista internacional e os conturbados anos da Era Vargas no Brasil. Essa contextualização é fundamental para entendermos a dimensão real dos acontecimentos e a complexidade das escolhas de Olga.
+
+A narrativa é repleta de detalhes que só uma apuração jornalística rigorosa, uma verdadeira "curadoria enorme" dos fatos, como você bem disse, poderia oferecer. Esses pormenores – desde as estratégias da Internacional Comunista até a descrição clínica do sistema carcerário nazista – transformam a leitura em uma experiência quase imersiva. É impossível não se sentir conectado com a realidade daqueles dias sombrios.
+
+Dentre as muitas passagens marcantes, duas me paralisaram. A primeira é o relato angustiante do seu embarque forçado, grávida, no navio La Coruña, para ser deportada pelo governo Vargas e entregue às garras de Hitler. É um daqueles trechos que exige uma pausa para respirar e processar a crueldade e a injustiça do ato. A segunda, é claro, é a descrição de seu fim na câmara de gás, em Bernburg. Morais narra o último ato de sua vida com uma sobriedade que, longe de amenizar, intensifica a tragédia e a dignidade de Olga.
+
+Recomendo este livro com o mais firme entusiasmo. Ele é leitura obrigatória não apenas para quem se interessa pela figura extraordinária de Olga Benario, mas para qualquer um que queira compreender um dos períodos mais cruciais da história do Brasil e do mundo. É um testemunho comovente, um trabalho jornalístico primoroso e, acima de tudo, um lembrete necessário sobre os horrores do autoritarismo e a resistência corajosa daqueles que ousaram lutar contra ele. Uma obra que fica conosco muito depois de virada a última página.`,
   },
 ];
