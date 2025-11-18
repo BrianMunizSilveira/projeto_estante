@@ -560,4 +560,25 @@ Dentre as muitas passagens marcantes, duas me paralisaram. A primeira é o relat
 
 Recomendo este livro com o mais firme entusiasmo. Ele é leitura obrigatória não apenas para quem se interessa pela figura extraordinária de Olga Benario, mas para qualquer um que queira compreender um dos períodos mais cruciais da história do Brasil e do mundo. É um testemunho comovente, um trabalho jornalístico primoroso e, acima de tudo, um lembrete necessário sobre os horrores do autoritarismo e a resistência corajosa daqueles que ousaram lutar contra ele. Uma obra que fica conosco muito depois de virada a última página.`,
   },
+  {
+    title: "Persépolis",
+    author: "Marjane Satrapi",
+    description: "Persépolis, a autobiografia em quadrinhos da iraniana Marjane Satrapi, é publicada agora em volume único, que reúne as quatro partes da história. Marjane Satrapi tinha apenas dez anos quando se viu obrigada a usar o véu islâmico, numa sala de aula só de meninas. Nascida numa família moderna e politizada, em 1979 ela assistiu ao início da revolução que lançou o Irã nas trevas do regime xiita - apenas mais um capítulo nos muitos séculos de opressão do povo persa. Vinte e cinco anos depois, com os olhos da menina que foi e a consciência política à flor da pele da adulta em que se transformou, Marjane emocionou leitores de todo o mundo com essa autobiografia em quadrinhos, que só na França vendeu mais de 400 mil exemplares. Em Persépolis, o pop encontra o épico, o oriente toca o ocidente, o humor se infiltra no drama - e o Irã parece muito mais próximo do que poderíamos suspeitar.",
+    year: 2007,
+    pages: 352 ,
+    publisher: "Companhia das Letras",
+    genres: ["Graphic Novel", "Memórias / Autobiografia", "História", "Literatura Estrangeira", "Drama"],
+    cover: "./src/img/capas/persepolis.webp",
+    review: `Antes de ler 'Persépolis', meu conhecimento sobre o Irã se resumia às notícias sobre política e conflitos. A grande sacada de Marjane Satrapi foi me fazer enxergar a história de um país inteiro através dos olhos de uma criança cheia de opiniões. Isso muda tudo. O livro vai muito além de contar uma guerra; ele mostra como a vida comum é transformada quando a política invade cada canto da sua casa.
+    
+    A minha primeira surpresa foi ver um Irã moderno e familiar nas primeiras páginas. A Marjane criança tem uma família que discute ideias, ouve música ocidental e vive uma realidade que destrói todos os meus preconceitos. Ver essa liberdade sendo perdida página após página – com a imposição do véu, o sumiço de pessoas, o medo – me fez entender que a Revolução Islâmica não foi só uma mudança de governo. Foi uma mudança forçada da identidade de um povo.
+    
+    Na infância, ela perde a chance de ser só uma criança. Suas conversas com Deus no quarto mostram uma menina tentando dar sentido a um mundo adulto que enlouqueceu. 
+    
+    Na adolescência, na Europa, ela descobre um outro tipo de solidão: a de não pertencer a lugar nenhum. Não é mais vista como iraniana 'de verdade' pelos europeus, e se tornou 'ocidental demais' para seu próprio povo. 
+    
+    Na vida adulta, ao voltar, vem o golpe mais duro: o Irã que ela sentia saudades não existe mais. A luta dela vira uma busca interna por um jeito de ser ela mesma num lugar que rejeita tudo o que ela é. Os desenhos em preto e branco não são só um estilo – são a alma do livro. A simplicidade dos traços de Marjane consegue expressar sentimentos que palavras sozinhas teriam dificuldade. A cena da mãe dela se disfarçando depois de um protesto, por exemplo, me marcou profundamente. Em poucos quadros, sem texto dramático, entendi o terror e a coragem que conviviam naquela casa.
+    
+    'Persépolis' é daqueles livros que nos transformam. Depois da leitura, o Irã deixou de ser um ponto no mapa para se tornar um lugar de pessoas reais, com histórias reais. Marjane não quer nossa pena – ela nos oferece compreensão. E num mundo de julgamentos rápidos, esse é um presente raro. Recomendo não só para quem gosta de quadrinhos, mas para qualquer um que acredite que entender o outro é o primeiro passo para um mundo menos dividido.`,
+  },
 ];
