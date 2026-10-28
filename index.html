@@ -1,322 +1,526 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="author" content="Brian Muniz Silveira" />
-  <meta name="description" content="Minha Estante Virtual" />
-  <meta name="keywords" content="Minha Estante Virtual, livros, leitura" />
-  <meta name="robots" content="index, follow" />
-  <meta name="copyright" content="Brian Muniz Silveira" />
-  <meta name="language" content="pt-br" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Merriweather:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @layer base {
 
-  <!-- Open Graph Protocol -->
-  <meta property="og:title" content="Estante Virtual" />
-  <meta property="og:description"
-    content="Explore minha coleção de livros, onde você pode buscar, descobrir e aprender." />
-  <meta property="og:image" content="https://i.imgur.com/rK6ANJk.png" />
-  <meta property="og:url" content="https://brianmunizsilveira.github.io/projeto_estante/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="Estante Virtual" />
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
 
-  <title>Estante Virtual</title>
-  <link rel="stylesheet" href="./src/css/reset.css" />
-  <link rel="stylesheet" href="./src/css/main.css" />
-  <link rel="stylesheet" href="./src/css/responsive.css" />
-  <link rel="shortcut icon" href="./src/img/leitor.png" type="image/x-icon" />
+            body {
+                overscroll-behavior: none;
+            }
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+            main>:first-child {
+                margin-top: 0 !important;
+            }
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #E2D9CC;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #83746b;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#eae8e5", "inverse-surface": "#30312f", "on-tertiary-fixed": "#2b1700", "primary-fixed-dim": "#f4bb92", "ink-charcoal": "#1F1A17", "error": "#ba1a1a", "on-secondary-container": "#546a55", "on-surface": "#1b1c1a", "secondary": "#4e6450", "surface-tint": "#805533", "on-tertiary-fixed-variant": "#663e00", "on-background": "#1b1c1a", "surface-container-highest": "#e4e2df", "on-secondary-fixed": "#0c2010", "surface-vellum": "#EAE3D9", "surface-variant": "#e4e2df", "surface-bright": "#fbf9f6", "secondary-fixed-dim": "#b5cdb4", "tertiary-container": "#925c0b", "surface": "#fbf9f6", "on-tertiary-container": "#ffe3c7", "primary-container": "#8b5e3c", "primary-fixed": "#ffdcc5", "on-secondary": "#ffffff", "inverse-primary": "#f4bb92", "surface-cream": "#F3EFEA", "on-primary-fixed-variant": "#653d1e", "surface-container": "#efeeeb", "secondary-fixed": "#d1e9cf", "on-secondary-fixed-variant": "#374c39", "secondary-container": "#d1e9cf", "surface-container-lowest": "#ffffff", "primary": "#6f4627", "on-primary-fixed": "#301400", "book-spine-shadow": "#1A110B", "tertiary-fixed": "#ffddb9", "tertiary-fixed-dim": "#feb964", "outline": "#83746b", "surface-parchment": "#FAF8F5", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-container-low": "#f5f3f0", "surface-dim": "#dbdad7", "on-primary-container": "#ffe3d1", "on-surface-variant": "#51443c", "slate-night": "#0F172A", "tertiary": "#724600", "border-warm": "#E2D9CC", "on-error": "#ffffff", "ink-muted": "#5C534B", "inverse-on-surface": "#f2f0ed", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#d5c3b8", "background": "#fbf9f6" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "margin-mobile": "1.25rem", margin: "3rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-2xl": "4rem", "space-md": "1rem", gutter: "1.5rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, fontFamily: { "headline-sm": ["Merriweather"], "body-md": ["Inter"], "headline-lg": ["Merriweather"], "label-caps": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "headline-md": ["Merriweather"], "body-lg": ["Inter"], "headline-lg-mobile": ["Merriweather"], "display-lg": ["Merriweather"], "display-lg-mobile": ["Merriweather"], "body-sm": ["Inter"] }, fontSize: { "headline-sm": ["1.125rem", { lineHeight: "1.625rem", fontWeight: "700" }], "body-md": ["0.9375rem", { lineHeight: "1.5rem", fontWeight: "400" }], "headline-lg": ["2rem", { lineHeight: "2.5rem", fontWeight: "700" }], "label-caps": ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.08em", fontWeight: "700" }], "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.04em", fontWeight: "600" }], "headline-md": ["1.375rem", { lineHeight: "1.875rem", fontWeight: "400" }], "body-lg": ["1.125rem", { lineHeight: "1.75rem", fontWeight: "400" }], "headline-lg-mobile": ["1.5rem", { lineHeight: "2rem", fontWeight: "700" }], "display-lg": ["2.75rem", { lineHeight: "3.25rem", letterSpacing: "-0.02em", fontWeight: "700" }], "display-lg-mobile": ["2rem", { lineHeight: "2.5rem", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["0.8125rem", { lineHeight: "1.25rem", fontWeight: "400" }] } } } };</script>
 </head>
 
-<body>
-  <header>
-    <div class="header-decoration"></div>
-    <svg class="book-icon">...</svg>
-    <svg class="book-icon">...</svg>
-
-    <div class="relogio-container relogio">
-      <i class="bi bi-clock"></i>
-      <span class="relogio-label">Horário:</span>
-      <span id="horario"></span>
-    </div>
-
-
-    <h1>Minha Estante Virtual</h1>
-    <p class="header-subtitle">Explore minha coleção de livros</p>
-
-    <div class="search-container">
-      <i class="bi bi-search search-icon"></i>
-      <input type="text" id="search-bar" placeholder="Buscar por título ou autor...">
-      <div id="snackbar"></div>
-    </div>
-  </header>
-
-  <main id="book-shelf" class="books-grid">
-    <!-- Os livros serão inseridos aqui dinamicamente -->
-  </main>
-
-  <!-- Modal de boas-vindas -->
-  <div id="welcomeAlert" class="modal">
-    <div class="modal-content">
-      <span id="closeWelcomeAlert" class="close">&times;</span>
-      <p>Bem-vinda(o)! Para saber mais sobre os livros, basta clicar na capa. Aproveite!</p>
-    </div>
-  </div>
-
-  <!-- Modal do livro -->
-  <div class="modal" id="book-modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="modal-header">
-        <h2 id="modal-title" class="modal-title">Título do Livro</h2>
-      </div>
-
-      <div class="book-details">
-        <img id="modal-cover" src="" alt="Capa do livro" class="book-cover-large">
-
-        <div class="book-meta">
-          <p><i class="bi bi-person"></i> <strong>Autor:</strong> <span id="modal-author"></span></p>
-          <p><i class="bi bi-building"></i> <strong>Editora:</strong> <span id="book-publisher"></span></p>
-          <p><i class="bi bi-calendar"></i> <strong>Ano:</strong> <span id="book-year"></span></p>
-          <p><i class="bi bi-file-text"></i> <strong>Páginas:</strong> <span id="book-pages"></span></p>
-          <p><i class="bi bi-tags"></i> <strong>Gênero:</strong> <span id="book-genre"></span></p>
+<body
+    class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden lg:overflow-hidden lg:h-screen flex flex-col">
+    <!-- Top Studio Nav Header -->
+    <header
+        class="w-full shrink-0 z-40 bg-surface-parchment/95 backdrop-blur-xl border-b border-border-warm shadow-[0_2px_8px_-2px_rgba(26,17,11,0.06)]">
+        <div class="h-16 w-full px-4 lg:px-8 flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-3 min-w-max">
+                <div class="w-9 h-9 rounded bg-primary-container/20 flex items-center justify-center text-primary"><span
+                        class="material-symbols-outlined text-[22px]">menu_book</span></div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-2"><span
+                            class="font-headline-sm text-base text-primary tracking-tight font-bold">Minha Estante
+                            Virtual</span><span
+                            class="bg-primary/10 text-primary text-[10px] font-semibold px-2 py-0.5 rounded uppercase tracking-wider hidden sm:inline-block">Studio
+                            View</span></div><span
+                        class="font-label-caps text-[11px] text-ink-muted uppercase hidden md:inline-block">Explore
+                        minha coleção e paixão pela leitura • Brian Muniz Silveira</span>
+                </div>
+            </div>
+            <div class="hidden xl:flex items-center flex-1 max-w-md mx-space-md">
+                <div class="relative w-full"><span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input
+                        class="w-full bg-surface-cream text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm pl-9 pr-4 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-xs border border-border-warm/60"
+                        placeholder="Buscar por título, autor, editora ou tema..." type="search"></div>
+            </div>
+            <div class="flex items-center gap-3">
+                <nav class="hidden lg:flex items-center gap-1"><a aria-current="page"
+                        class="px-2.5 py-1 text-xs transition-colors bg-primary-container text-on-primary-container font-semibold rounded-md"
+                        href="#">Catálogo</a><a
+                        class="px-2.5 py-1 rounded-md text-xs font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"
+                        href="#">Gêneros</a><a
+                        class="px-2.5 py-1 rounded-md text-xs font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"
+                        href="#">Editoras</a><a
+                        class="px-2.5 py-1 rounded-md text-xs font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"
+                        href="#">Status</a><a
+                        class="px-2.5 py-1 rounded-md text-xs font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"
+                        href="#">Notas</a></nav>
+                <div class="h-5 w-px bg-border-warm hidden sm:block"></div>
+                <div class="flex items-center gap-1"><a aria-label="Skoob do Leitor"
+                        class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"
+                        href="https://www.skoob.com.br" rel="noopener noreferrer" target="_blank" title="Skoob"><span
+                            class="material-symbols-outlined text-[18px]">auto_stories</span></a><a
+                        aria-label="LinkedIn de Brian"
+                        class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"
+                        href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn"><span
+                            class="material-symbols-outlined text-[18px]">share</span></a><a
+                        aria-label="GitHub do Projeto"
+                        class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"
+                        href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub"><span
+                            class="material-symbols-outlined text-[18px]">code</span></a></div>
+                <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center ml-1"><span
+                        class="material-symbols-outlined text-on-primary text-[15px]">person</span></div>
+            </div>
         </div>
-      </div>
+    </header>
+    <!-- Main Workspace Split Container -->
+    <main class="w-full flex-1 flex flex-col lg:flex-row overflow-hidden bg-surface-parchment relative">
+        <!-- ========================================================================= -->
+        <!-- LEFT PANE (~55%): THE CURATED CATALOGUE & SHELF (Independent Scroll)     -->
+        <!-- ========================================================================= -->
+        <section
+            class="w-full lg:w-[54%] xl:w-[56%] h-auto lg:h-[calc(100vh-4rem)] lg:overflow-y-auto border-r border-border-warm flex flex-col justify-between">
+            <div class="p-4 sm:p-6 lg:p-7 space-y-6">
+                <!-- Hero Header Sutil & Citação Filosófica -->
+                <section
+                    class="relative bg-surface-cream rounded-xl p-5 sm:p-6 shadow-sm border border-border-warm/70 overflow-hidden">
+                    <div class="space-y-3 relative z-10">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div
+                                class="inline-flex items-center gap-1.5 bg-surface-parchment px-2.5 py-0.5 rounded-full text-ink-muted border border-border-warm/60">
+                                <span class="material-symbols-outlined text-primary text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+                                <span
+                                    class="font-label-caps text-[10px] uppercase tracking-wider text-primary">Curadoria
+                                    • Brian Muniz Silveira</span>
+                            </div>
+                            <!-- Badges Resumo -->
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="flex items-center gap-1 font-semibold text-ink-charcoal"><span
+                                        class="material-symbols-outlined text-[16px] text-primary">library_books</span>
+                                    24 Obras</span>
+                                <span class="text-ink-muted">•</span>
+                                <span class="flex items-center gap-1 font-semibold text-ink-charcoal"><span
+                                        class="material-symbols-outlined text-[16px] text-secondary">history_edu</span>
+                                    18 Resenhas</span>
+                            </div>
+                        </div>
+                        <h1 class="font-headline-md text-xl md:text-2xl text-ink-charcoal leading-snug">
+                            “Cada página lida é um passo em direção a um futuro mais consciente e inspirador.”
+                        </h1>
+                        <p class="font-body-sm text-xs sm:text-sm text-ink-muted leading-relaxed">
+                            Bem-vinda(o) ao meu refúgio literário digital. Uma estante viva dedicada à reflexão, análise
+                            textual e celebração do objeto livro. Selecione qualquer exemplar para carregar seus dados
+                            no leitor ao lado.
+                        </p>
+                    </div>
+                </section>
+                <!-- Barra de Filtros e Busca Inteligente -->
+                <div
+                    class="space-y-3 sticky top-0 bg-surface-parchment/95 backdrop-blur-md pt-1 pb-2 z-20 border-b border-border-warm/40">
+                    <!-- Pílulas de Categoria e Contadores -->
+                    <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none"
+                        id="categoryFilterContainer">
+                        <button
+                            class="category-pill active bg-primary text-on-primary px-3 py-1 rounded-full font-label-md text-xs shadow-xs transition-all whitespace-nowrap flex items-center gap-1.5"
+                            onclick="filterShelf('all', this)">
+                            <span class="">Todos</span>
+                            <span
+                                class="bg-primary-container text-on-primary-container px-1.5 py-0.2 rounded-full text-[10px]">24</span>
+                        </button>
+                        <button
+                            class="category-pill bg-surface-cream hover:bg-surface-vellum text-ink-charcoal px-3 py-1 rounded-full font-label-md text-xs transition-all whitespace-nowrap flex items-center gap-1.5 shadow-xs border border-border-warm/60"
+                            onclick="filterShelf('infantojuvenil', this)">
+                            <span class="">Fantasia &amp; Juvenil</span>
+                            <span
+                                class="bg-surface-container-high text-ink-muted px-1.5 py-0.2 rounded-full text-[10px]">8</span>
+                        </button>
+                        <button
+                            class="category-pill bg-surface-cream hover:bg-surface-vellum text-ink-charcoal px-3 py-1 rounded-full font-label-md text-xs transition-all whitespace-nowrap flex items-center gap-1.5 shadow-xs border border-border-warm/60"
+                            onclick="filterShelf('filosofia', this)">
+                            <span class="">Não-Ficção &amp; Filosofia</span>
+                            <span
+                                class="bg-surface-container-high text-ink-muted px-1.5 py-0.2 rounded-full text-[10px]">6</span>
+                        </button>
+                        <button
+                            class="category-pill bg-surface-cream hover:bg-surface-vellum text-ink-charcoal px-3 py-1 rounded-full font-label-md text-xs transition-all whitespace-nowrap flex items-center gap-1.5 shadow-xs border border-border-warm/60"
+                            onclick="filterShelf('brasileira', this)">
+                            <span class="">Literatura Brasileira</span>
+                            <span
+                                class="bg-surface-container-high text-ink-muted px-1.5 py-0.2 rounded-full text-[10px]">5</span>
+                        </button>
+                        <button
+                            class="category-pill bg-surface-cream hover:bg-surface-vellum text-ink-charcoal px-3 py-1 rounded-full font-label-md text-xs transition-all whitespace-nowrap flex items-center gap-1.5 shadow-xs border border-border-warm/60"
+                            onclick="filterShelf('ficcao', this)">
+                            <span class="">Ficção &amp; Sci-Fi</span>
+                            <span
+                                class="bg-surface-container-high text-ink-muted px-1.5 py-0.2 rounded-full text-[10px]">5</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Livro em Destaque da Semana (Bento Callout) -->
+                <section
+                    class="bg-surface-cream/80 border border-primary/20 rounded-xl p-3.5 shadow-xs flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+                            <span class="material-symbols-outlined text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-label-caps text-[10px] text-tertiary uppercase font-bold">Leitura em
+                                    Evidência</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                <span class="font-label-md text-xs text-secondary font-semibold">Resenha Completa</span>
+                            </div>
+                            <p class="font-body-sm text-xs sm:text-sm text-ink-charcoal font-semibold">
+                                Obra de referência: <span class="text-primary font-bold">Os Monstros do
+                                    Cartógrafo</span>
+                                de Rob Stevens
+                            </p>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-primary hover:bg-primary-container text-on-primary px-3 py-1.5 rounded-lg text-xs font-label-lg shadow-sm transition-all flex items-center gap-1 shrink-0"
+                        onclick="selectBook('os-monstros-do-cartografo')">
+                        <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                        <span class="">Ver Ficha</span>
+                    </button>
+                </section>
+                <!-- Estante de Livros: Grid de Livros com Lombada Tridimensional -->
+                <section class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[20px]">shelves</span>
+                            <h2 class="font-headline-sm text-base text-ink-charcoal">Estante Virtual • Acervo</h2>
+                        </div>
+                        <span class="font-label-md text-xs text-ink-muted">Clique em um livro para inspecionar</span>
+                    </div>
+                    <!-- Grid 3 colunas — populado dinamicamente por app.js a partir de books.js -->
+                    <div class="grid sm:grid-cols-3 gap-4" id="booksGrid"></div>
+                </section>
+                <!-- Divisória Madeira Estilizada -->
+                <div
+                    class="w-full h-2.5 bg-gradient-to-r from-primary-container via-surface-tint to-primary-container rounded-sm shadow-xs">
+                </div>
+                <!-- Seção Integrada: Sobre & Editoras -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Sobre este Acervo -->
+                    <div class="bg-surface-cream p-4 rounded-xl border border-border-warm/70 space-y-2.5 shadow-xs">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-[20px]">import_contacts</span>
+                            <h3 class="font-headline-sm text-sm font-bold">Sobre este Acervo</h3>
+                        </div>
+                        <p class="font-body-sm text-xs text-ink-muted leading-relaxed">
+                            <strong>Minha Estante Virtual</strong> é um projeto criado para aprimorar minhas habilidades
+                            em desenvolvimento web, enquanto compartilho minhas leituras e meu amor genuíno pelos
+                            livros. Acredito profundamente que a literatura tem o poder transformador de mudar as
+                            pessoas e iluminar horizontes coletivos.
+                        </p>
+                        <div class="pt-1 text-ink-charcoal font-headline-sm text-xs italic">
+                            — Brian Muniz Silveira
+                        </div>
+                    </div>
+                    <!-- Editoras Lidas -->
+                    <div class="bg-surface-cream p-4 rounded-xl border border-border-warm/70 space-y-2.5 shadow-xs">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-[20px]">domain</span>
+                            <h3 class="font-headline-sm text-sm font-bold">Editoras Lidas</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 font-label-md text-xs">
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">Bertrand
+                                Brasil</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">Companhia
+                                das Letras</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">Aleph</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">DarkSide
+                                Books</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">Antofágica</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">Intrínseca</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">HarperCollins</span>
+                            <span
+                                class="bg-surface-parchment text-ink-charcoal px-2 py-0.5 rounded text-[11px] border border-border-warm/50">Record</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- Mini-Footer da Coluna Esquerda -->
+                <footer
+                    class="pt-4 border-t border-border-warm text-ink-muted text-xs flex flex-col sm:flex-row justify-between items-center gap-2 pb-2">
+                    <p class="">© 2024 Minha Estante Virtual • Brian Muniz Silveira.</p>
+                    <div class="flex items-center gap-3">
+                        <a class="hover:text-primary transition-colors" href="https://www.skoob.com.br"
+                            target="_blank">Skoob</a>
+                        <span class="">•</span>
+                        <a class="hover:text-primary transition-colors" href="https://linkedin.com"
+                            target="_blank">LinkedIn</a>
+                        <span class="">•</span>
+                        <a class="hover:text-primary transition-colors" href="https://github.com"
+                            target="_blank">GitHub</a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <!-- ========================================================================= -->
+        <!-- RIGHT PANE (~45%): PERMANENT READER & REVIEW STUDIO (Independent Scroll)  -->
+        <!-- ========================================================================= -->
+        <aside
+            class="w-full lg:w-[46%] xl:w-[44%] h-auto lg:h-[calc(100vh-4rem)] lg:overflow-y-auto bg-surface flex flex-col justify-between"
+            id="readerStudioPane">
+            <div>
+                <!-- Reader Studio Header -->
+                <div
+                    class="px-5 lg:px-7 py-3.5 border-b border-border-warm bg-surface-cream/80 backdrop-blur-sm sticky top-0 z-30 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        <span class="font-label-caps text-xs uppercase font-bold text-primary tracking-wider">Ficha
+                            &amp; Estúdio de Leitura</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase"
+                            id="readerStatusBadge">Leitura Concluída</span>
+                        <button class="p-1 rounded text-ink-muted hover:text-tertiary transition-colors"
+                            id="readerFavBtn" onclick="toggleReaderFavorite()" title="Favoritar este livro">
+                            <span class="material-symbols-outlined text-[18px] text-tertiary"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Book Overview Hero Card -->
+                <div class="p-5 lg:p-7 space-y-6">
+                    <div
+                        class="flex flex-col sm:flex-row gap-5 items-start bg-surface-cream p-5 rounded-xl border border-border-warm/70 shadow-xs">
+                        <!-- Book Cover Preview -->
+                        <div
+                            class="relative w-32 sm:w-36 aspect-[1/1.48] rounded-md overflow-hidden shadow-[0_8px_20px_-3px_rgba(26,17,11,0.22)] shrink-0 bg-surface-container-high mx-auto sm:mx-0">
+                            <div
+                                class="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-book-spine-shadow/50 via-book-spine-shadow/20 to-transparent z-10 pointer-events-none">
+                            </div>
+                            <div class="absolute left-0.5 top-0 bottom-0 w-0.5 bg-white/30 z-10 pointer-events-none">
+                            </div>
+                            <img class="w-full h-full object-cover transition-all duration-300" alt="Capa do livro"
+                                id="studioBookCover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmszYO8Xubm2hq0MLGbPO89blKP1gRkfP8PgGJtXTL-42E4JqqsV1nDNAXBzHUol0PrJffEdiwklkEw_Sbmsd5Suul0RFDlKnD6a7iAyiwovCiKNEwaLwLt4qMNruqcpHsuVtAtl_5QDIOP1lbo6W4i5ecwLq0UPWnBUePttFE2cDxtcBaMEIJGwSyB1or-j8PLTlnavNKcZzbt_oc6CiFrqrst2QI_vto664JE_0t">
+                        </div>
+                        <!-- Main Book Information -->
+                        <div class="flex-1 space-y-2 text-center sm:text-left">
+                            <div class="font-label-caps text-[11px] text-primary uppercase font-bold tracking-wider"
+                                id="studioBookCollection">Bertrand Brasil • Coleção Infantojuvenil</div>
+                            <h2 class="font-headline-md text-xl lg:text-2xl text-ink-charcoal leading-tight font-bold"
+                                id="studioBookTitle">Os Monstros do Cartógrafo</h2>
+                            <div
+                                class="flex items-center justify-center sm:justify-start gap-1.5 text-ink-muted text-sm">
+                                <span class="">Por</span>
+                                <span class="font-headline-sm text-sm text-ink-charcoal font-bold"
+                                    id="studioBookAuthor">Rob Stevens</span>
+                            </div>
+                            <!-- Rating Stars -->
+                            <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-600 pt-1">
+                                <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                <span class="font-label-lg text-xs font-bold text-ink-charcoal ml-1"
+                                    id="studioBookScore">5.0</span>
+                                <span class="text-ink-muted text-[11px]">/ 5.0 pessoal</span>
+                            </div>
+                            <!-- Metadata Grid -->
+                            <div class="grid gap-1.5 pt-2 text-left grid-cols-3">
+                                <div
+                                    class="bg-surface-parchment px-2.5 py-1.5 rounded text-xs flex flex-col border border-border-warm/60">
+                                    <span class="font-label-caps text-[9px] text-ink-muted uppercase">Ano de
+                                        Edição</span>
+                                    <span class="font-label-lg text-xs text-ink-charcoal font-semibold"
+                                        id="studioMetaYear">2011</span>
+                                </div>
+                                <div
+                                    class="bg-surface-parchment px-2.5 py-1.5 rounded text-xs flex flex-col border border-border-warm/60">
+                                    <span class="font-label-caps text-[9px] text-ink-muted uppercase">Extensão</span>
+                                    <span class="font-label-lg text-xs text-ink-charcoal font-semibold"
+                                        id="studioMetaPages">320 Páginas</span>
+                                </div>
+                                <div
+                                    class="bg-surface-parchment px-2.5 py-1.5 rounded text-xs flex flex-col border border-border-warm/60">
+                                    <span class="font-label-caps text-[9px] text-ink-muted uppercase">Gênero</span>
+                                    <span class="font-label-lg text-xs text-ink-charcoal font-semibold"
+                                        id="studioMetaGenre">Fantasia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Segmented Tab Navigation -->
+                    <div
+                        class="bg-surface-cream p-1 rounded-lg flex items-center justify-between border border-border-warm/70">
+                        <button
+                            class="flex-1 py-1.5 px-3 rounded-md font-label-lg text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 bg-surface-parchment text-primary shadow-xs"
+                            id="tabBtnOverview" onclick="switchStudioTab('overview')">
+                            <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                            <span class="">Visão Geral &amp; Sinopse</span>
+                        </button>
+                        <button
+                            class="flex-1 py-1.5 px-3 rounded-md font-label-lg text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 text-ink-muted hover:text-ink-charcoal"
+                            id="tabBtnReview" onclick="switchStudioTab('review')">
+                            <span class="material-symbols-outlined text-[16px]">rate_review</span>
+                            <span class="">Minha Resenha (Brian)</span>
+                        </button>
+                    </div>
+                    <!-- TAB CONTENT: Visão Geral & Sinopse -->
+                    <div class="space-y-5 animate-fadeIn" id="tabContentOverview">
+                        <div class="space-y-2">
+                            <h4 class="font-label-caps text-[11px] text-primary uppercase font-bold tracking-wider">
+                                Sinopse da Obra</h4>
+                            <p class="font-body-md text-sm text-ink-charcoal leading-relaxed" id="studioSynopsisP1">—
+                            </p>
+                            <p class="font-body-sm text-xs sm:text-sm text-ink-muted leading-relaxed"
+                                id="studioSynopsisP2"></p>
+                        </div>
+                        <!-- Highlight Quote Box -->
+                        <div
+                            class="bg-surface-cream border-l-4 border-primary p-4 rounded-r-lg space-y-1.5 relative border-t border-b border-r border-border-warm/60">
+                            <span
+                                class="material-symbols-outlined absolute top-2 right-2 text-primary/15 text-[32px] pointer-events-none">format_quote</span>
+                            <p class="font-headline-sm text-sm text-ink-charcoal italic leading-snug"
+                                id="studioQuoteText">—</p>
+                            <span class="font-label-md text-xs text-primary font-bold block"
+                                id="studioQuoteAuthor"></span>
+                        </div>
+                        <!-- Temáticas Centrais -->
+                        <div class="space-y-2">
+                            <h4 class="font-label-caps text-[11px] text-primary uppercase font-bold tracking-wider">
+                                Temáticas Centrais</h4>
+                            <div class="flex flex-wrap gap-1.5 font-label-md text-xs" id="studioThemesList"></div>
+                        </div>
+                        <div class="pt-1">
+                            <button
+                                class="w-full bg-surface-cream hover:bg-surface-vellum text-primary py-2 px-4 rounded-lg font-label-lg text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-xs border border-border-warm"
+                                onclick="switchStudioTab('review')">
+                                <span class="">Acessar Análise Crítica e Resenha de Brian</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- TAB CONTENT: Minha Resenha (Brian) -->
+                    <div class="space-y-4 hidden animate-fadeIn" id="tabContentReview">
+                        <div
+                            class="bg-surface-cream p-3 rounded-lg flex items-center justify-between border border-border-warm/60">
+                            <div class="flex items-center gap-2.5">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-xs font-bold">
+                                    BM</div>
+                                <div>
+                                    <div class="font-label-lg text-xs font-bold text-ink-charcoal">Resenha por Brian
+                                        Muniz Silveira</div>
+                                    <div class="font-label-caps text-[10px] text-ink-muted uppercase"
+                                        id="studioReviewMeta">—</div>
+                                </div>
+                            </div>
+                            <span
+                                class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold">Recomendado</span>
+                        </div>
+                        <div class="space-y-3 font-body-sm text-xs sm:text-sm text-ink-charcoal leading-relaxed"
+                            id="studioReviewBody"></div>
+                        <div class="border-t border-border-warm pt-3">
+                            <span class="font-label-caps text-[10px] text-ink-muted uppercase block mb-1">Citação que
+                                Marquei a Lápis:</span>
+                            <p class="font-body-md text-xs sm:text-sm italic text-primary" id="studioReviewQuote">—</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Permanent Studio Bottom Toolbar -->
+            <div
+                class="px-5 lg:px-7 py-3 border-t border-border-warm bg-surface-cream/95 backdrop-blur-sm sticky bottom-0 z-30 flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2 text-xs font-label-md text-ink-muted">
+                    <span class="font-label-caps text-[10px] text-ink-muted uppercase hidden sm:inline">Ver em:</span>
+                    <a id="studioLinkSkoob"
+                        class="hover:text-primary font-semibold transition-colors flex items-center gap-1"
+                        href="https://www.skoob.com.br" target="_blank">
+                        <span class="material-symbols-outlined text-[14px]">auto_stories</span><span>Skoob</span>
+                    </a>
+                    <span class="">•</span>
+                    <a id="studioLinkGoodreads"
+                        class="hover:text-primary font-semibold transition-colors flex items-center gap-1"
+                        href="https://www.goodreads.com" target="_blank">
+                        <span class="material-symbols-outlined text-[14px]">book</span><span>Goodreads</span>
+                    </a>
+                    <span class="">•</span>
+                    <a id="studioLinkPublisher"
+                        class="hover:text-primary font-semibold transition-colors flex items-center gap-1" href="#"
+                        target="_blank">
+                        <span class="material-symbols-outlined text-[14px]">storefront</span><span>Editora</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button
+                        class="bg-surface-parchment hover:bg-surface-vellum text-ink-charcoal px-3 py-1.5 rounded-lg text-xs font-label-md transition-colors flex items-center gap-1 border border-border-warm shadow-xs"
+                        onclick="shareBookInfo()">
+                        <span class="material-symbols-outlined text-[15px]">share</span>
+                        <span id="shareBtnLabel" class="">Compartilhar</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <!-- Studio Interactivity Script -->
+    <script type="module" src="./app.js"></script>
 
-      <h3>Sinopse</h3>
-      <p id="modal-description" class="book-description">Descrição do livro...</p>
-
-      <button id="review-btn" class="review-btn">
-        <i class="bi bi-chat-square-text"></i> Ver Resenha
-      </button>
-    </div>
-  </div>
-
-  <!-- Modal da resenha -->
-  <div class="modal" id="review-modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="modal-header">
-        <h2 id="review-modal-title" class="modal-title">Resenha</h2>
-      </div>
-      <p id="review-modal-text" class="review-text">Aqui está a resenha do livro...</p>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-about">
-        <h4><i class="bi bi-info-circle-fill"></i> Sobre</h4>
-        <p>
-          <strong><i class="bi bi-book-fill"></i> Estante Virtual</strong> é
-          um projeto criado para aprimorar minhas habilidades em
-          desenvolvimento web, enquanto compartilho minhas leituras e meu amor
-          pelos livros. Acredito profundamente que a leitura – especialmente
-          de livros – tem o poder transformador de mudar não apenas as
-          pessoas, mas também o mundo para melhor.
-        </p>
-        <br />
-        <p>
-          <cite>
-            <i class="bi bi-quote"></i>
-            Afinal, cada página lida é um passo em direção a um futuro mais
-            consciente e inspirador. <i class="bi bi-quote"></i> –
-            <strong>Brian Muniz Silveira</strong>
-          </cite>
-        </p>
-      </div>
-      <div class="footer-publishers">
-        <h4><i class="bi bi-building"></i> Editoras</h4>
-        <nav>
-          <ul>
-            <li>
-              <a href="https://editoraaleph.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-book"></i>
-                Aleph</a>
-            </li>
-            <li>
-              <a href="https://loja.grupoa.com.br/marcas/artmed" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-journal-bookmark"></i> Artmed</a>
-            </li>
-            <li>
-              <a href="https://www.record.com.br/editoras/bertrand-brasil/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-bookmarks"></i> Bertrand Brasil</a>
-            </li>
-            <li>
-              <a href="https://www.touchelivros.com.br/editora/a-do-livro/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-bookshelf"></i> Círculo do Livro</a>
-            </li>
-            <li>
-              <a href="https://www.companhiadasletras.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-book-half"></i> Companhia das Letras</a>
-            </li>
-            <li>
-              <a href="https://pt.wikipedia.org/wiki/Cosac_Naify" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-book"></i> Cosac Naify</a>
-            </li>
-            <li>
-              <a href="https://www.darksidebooks.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-moon"></i> DarkSide Books</a>
-            </li>
-            <li>
-              <a href="https://www.companhiadasletras.com.br/Busca?selo=Fontanar" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-palette"></i> Fontanar</a>
-            </li>
-            <li>
-              <a href="https://www.record.com.br/editoras/galera/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-person"></i> Galera Record</a>
-            </li>
-            <li>
-              <a href="https://loja.giostrieditora.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-pen"></i> Giostri Editora</a>
-            </li>
-            <li>
-              <a href="https://intrinseca.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-lightbulb"></i> Intrínseca</a>
-            </li>
-            <li>
-              <a href="https://www.lpm.com.br/site/default.asp" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-pencil"></i> L&PM</a>
-            </li>
-            <li>
-              <a href="https://www.gruponovoseculo.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-house-door"></i> Novo Século</a>
-            </li>
-            <li>
-              <a href="https://www.companhiadasletras.com.br/Busca?selo=Objetiva" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-arrow-right-circle"></i> Objetiva</a>
-            </li>
-            <li>
-              <a href="https://www.editorapeiropolis.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-bookmark"></i> Peirópolis</a>
-            </li>
-            <li>
-              <a href="https://www.vreditora.com.br/plataforma-21" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-card-list"></i> Plataforma21</a>
-            </li>
-            <li>
-              <a href="https://record.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-bookmark-check"></i> Record</a>
-            </li>
-            <li>
-              <a href="https://site.taglivros.com/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-bookmark-dash"></i> TAG</a>
-            </li>
-            <li>
-              <a href="https://www.vreditora.com.br/" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-file-earmark"></i> V&R Editoras</a>
-            </li>
-            <li>
-              <a href="https://www.amazon.com.br/vest%C3%ADgio-editora/s?k=vest%C3%ADgio+editora" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-box"></i> Vestígio</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <nav class="footer-links">
-        <h4><i class="bi bi-link-45deg"></i> Links Úteis</h4>
-        <ul>
-          <li>
-            <a href="https://lelivros.love/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-file-earmark-arrow-down"></i> Baixe eBooks no Le
-              Livros
-            </a>
-          </li>
-          <li>
-            <a href="https://www.bookdepository.com/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-shop"></i> Compre livros no Book Depository
-            </a>
-          </li>
-          <li>
-            <a href="https://pipocamusical.com.br/2014/01/02/skoob-como-funciona-maior-rede-social-de-livros-brasil/"
-              target="_blank" nofollow rel="noopener noreferrer"><i class="bi bi-book-half"></i> Conheça o Skoob</a>
-          </li>
-          <li>
-            <a href="https://youtu.be/D75B87l5SUw?si=OA2I6AgpywGL8uNp" target="_blank" nofollow
-              rel="noopener noreferrer"><i class="bi bi-youtube"></i> Crie o hábito de ler</a>
-          </li>
-          <li>
-            <a href="https://www.goodreads.com/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-book"></i> Descubra livros no Goodreads
-            </a>
-          </li>
-          <li>
-            <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-book-half"></i> Explore o Projeto Gutenberg
-            </a>
-          </li>
-          <li>
-            <a href="https://read.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-tablet"></i> Kindle Cloud Reader
-            </a>
-          </li>
-          <li>
-            <a href="http://www.dominiopublico.gov.br/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-cloud-download"></i> Livros grátis no Domínio
-              Público
-            </a>
-          </li>
-          <li>
-            <a href="https://www.culturagenial.com/livros" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-journal-text"></i> Resumos e análises na Cultura
-              Genial
-            </a>
-          </li>
-          <li>
-            <a href="https://www.ted.com/topics/reading" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-play-btn"></i> TED Talks sobre Leitura
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer-contact">
-        <h4><i class="bi bi-envelope-fill"></i> Conecte-se comigo</h4>
-        <p>
-          <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" nofollow
-            rel="noopener noreferrer"><i class="bi bi-linkedin"></i>Linkedin</a>
-        </p>
-      </div>
-      <div class="footer-references">
-        <h4><i class="bi-info-circle"></i>Referências</h4>
-        <p>
-          <a href="https://www.flaticon.com/br/icone-gratis/pointer_5987751" target="_blank" nofollow
-            rel="noopener noreferrer"><i class="bi bi-cursor-fill"></i> Cursor "Mãozinha"
-          </a>
-        </p>
-        <p>
-          <a href="https://www.flaticon.com/br/icone-gratis/pointer_5987590?term=cursor+pointer&page=1&position=2&origin=search&related_id=5987590"
-            target="_blank" nofollow rel="noopener noreferrer"><i class="bi bi-cursor"></i> Ícone do mouse padrão
-          </a>
-        </p>
-        <p>
-          <a href="https://www.skoob.com.br/" target="_blank" nofollow rel="noopener noreferrer"><img
-              src="./src/img/skoob-logo.png" alt="Logo do Skoob" class="skoob-logo"> Skoob
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>
-        <i class="bi bi-github"></i>
-        Este projeto é <a href="https://github.com/BrianMunizSilveira/projeto_estante" target="_blank"
-          rel="noopener noreferrer" title="GitHub" style="text-decoration: underline;">Open Source</a>
-      </p>
-    </div>
-  </footer>
-
-  <div id="back-to-top" title="Voltar ao topo">
-    <i class="bi bi-arrow-up-circle"></i>
-  </div>
-
-  <script src="./src/js/books.js"></script>
-  <script src="./src/js/script.js"></script>
 </body>
-
-</html>
 
 </html>
