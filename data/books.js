@@ -26,8 +26,8 @@ export const booksData = [
             "Infantojuvenil"
         ],
         "links": {
-            "skoob": "https://www.skoob.com.br/",
-            "goodreads": "https://www.goodreads.com/",
+            "skoob": "https://www.skoob.com.br/pt/book/223097?title=os-monstros-do-cartografo-cuidado-com-os-bufalogros",
+            "goodreads": "https://www.goodreads.com/book/show/50271428",
             "publisher": "https://www.record.com.br/editoras/bertrand-brasil/"
         }
     },
@@ -42,7 +42,7 @@ export const booksData = [
         "genre": "Divulgação Científica",
         "time": "~ 1h 29m",
         "rating": 5,
-        "status": "favorito",
+        "status": "lido",
         "coverUrl": "./src/img/capas/dinos.webp",
         "quote": "",
         "quoteAuthor": "",
@@ -55,9 +55,9 @@ export const booksData = [
             "Infantojuvenil"
         ],
         "links": {
-            "skoob": "https://www.skoob.com.br/",
-            "goodreads": "https://www.goodreads.com/",
-            "publisher": "https://www.record.com.br/editoras/bertrand-brasil/"
+            "skoob": "https://www.skoob.com.br/pt/book/299356",
+            "goodreads": "https://www.goodreads.com/book/show/16713699",
+            "publisher": "https://www.editorapeiropolis.com.br/produto/dinos-do-brasil/"
         }
     },
     {
